@@ -148,7 +148,7 @@ export const portfolioData = {
       ]
     },
     {
-      category: "AI Integration & LLMOps",
+      category: "AI Integration",
       skills: [
         "LLM Integration",
         "Large Language Model Operations (LLMOps)",

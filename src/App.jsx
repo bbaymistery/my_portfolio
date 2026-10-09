@@ -25,28 +25,59 @@ export default function App() {
     document.documentElement.classList.add('dark');
   }, []);
 
-  // IntersectionObserver to automatically detect active section while scrolling
+  // Robust scroll tracking algorithm that accurately updates active section even for very long sections
   useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
+    let isManualClick = false;
+    let clickTimeout;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: '-20% 0px -60% 0px',
-        threshold: 0.1
+    const handleScroll = () => {
+      if (isManualClick) return;
+
+      const sections = ['about', 'experience', 'skills', 'education', 'contact'];
+      const scrollPosition = window.scrollY + 160;
+
+      // Bottom of page check
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        setActiveSection('contact');
+        return;
       }
-    );
 
-    sections.forEach((section) => observer.observe(section));
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sectionEl = document.getElementById(sections[i]);
+        if (sectionEl) {
+          const top = sectionEl.offsetTop;
+          if (scrollPosition >= top - 60) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      }
+    };
+
+    const handleNavClick = (e) => {
+      const anchor = e.target.closest('a');
+      const href = anchor?.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const id = href.slice(1);
+        if (['about', 'experience', 'skills', 'education', 'contact'].includes(id)) {
+          isManualClick = true;
+          setActiveSection(id);
+          clearTimeout(clickTimeout);
+          clickTimeout = setTimeout(() => {
+            isManualClick = false;
+          }, 850);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleNavClick);
+    handleScroll();
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleNavClick);
+      clearTimeout(clickTimeout);
     };
   }, []);
 
@@ -85,9 +116,7 @@ export default function App() {
 
             <EducationSection
               education={portfolioData.education}
-              certifications={portfolioData.certifications}
               languages={portfolioData.languages}
-              linkedinUrl={portfolioData.personal.social.linkedin}
             />
 
             <ContactSection personalData={portfolioData.personal} />
