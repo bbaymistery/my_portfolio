@@ -1,6 +1,6 @@
 export const portfolioData = {
   personal: {
-    name: "Elgün Əzməmmədov",
+    name: "Elgün Ezmememdov",
     title: "Software & Data Engineer",
     subtitle: "Sakarya Üniversitesi Alumnus",
     tagline: "Building scalable platforms, modern web systems, and data pipelines.",

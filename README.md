@@ -1,4 +1,4 @@
-# ⚡ Personal Portfolio - Elgün Əzməmmədov
+# ⚡ Personal Portfolio - Elgün Ezmemmedov
 
 A modern, high-performance personal portfolio built with **React**, **Vite**, and **Tailwind CSS**. Features a two-column interactive layout, dark/light theme switching, smooth section scroll indicator tracking, and dynamic cursor backlight effects.
 
@@ -81,7 +81,3 @@ To deploy this repository to **GitHub Pages**:
    ```
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).

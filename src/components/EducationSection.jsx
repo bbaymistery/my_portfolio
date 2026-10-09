@@ -1,7 +1,7 @@
 import React from 'react';
-import { GraduationCap, Award, Globe, ExternalLink } from 'lucide-react';
+import { GraduationCap, Globe } from 'lucide-react';
 
-export default function EducationSection({ education, certifications, languages, linkedinUrl }) {
+export default function EducationSection({ education, languages }) {
   return (
     <section
       id="education"
@@ -10,7 +10,7 @@ export default function EducationSection({ education, certifications, languages,
     >
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-zinc-950/75 px-6 py-4 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="text-xs font-bold uppercase tracking-widest text-amber-400">
-          Education & Credentials
+          Education & Languages
         </h2>
       </div>
 
@@ -47,41 +47,6 @@ export default function EducationSection({ education, certifications, languages,
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* Certifications Block */}
-      <div className="mt-12">
-        <div className="flex items-center gap-2 mb-4">
-          <Award className="h-4 w-4 text-amber-400" />
-          <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-300">
-            Certifications
-          </h3>
-        </div>
-
-        <div className="glass-card p-5">
-          <ul className="divide-y divide-zinc-800/60">
-            {certifications.map((cert, index) => (
-              <li key={index} className="py-3 first:pt-0 last:pb-0 grid gap-1 sm:grid-cols-[1fr_auto] sm:items-center">
-                <span className="text-xs md:text-sm text-zinc-300 font-medium">
-                  {cert.title}
-                </span>
-                <span className="font-mono text-[11px] text-zinc-500">
-                  {cert.date}
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href={linkedinUrl ? `${linkedinUrl}/details/certifications/` : "https://linkedin.com"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-5 inline-flex items-center text-xs font-semibold text-amber-400 transition-colors hover:text-amber-300 focus-visible:text-amber-300 pt-3 border-t border-zinc-800/80 w-full"
-          >
-            <span>View all certifications on LinkedIn</span>
-            <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
-        </div>
       </div>
 
       {/* Languages Block */}
