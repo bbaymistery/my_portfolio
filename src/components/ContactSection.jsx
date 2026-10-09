@@ -74,7 +74,7 @@ export default function ContactSection({ personalData }) {
       </div>
 
       <p className="text-zinc-400 leading-relaxed text-sm md:text-base mb-8">
-        Projeleriniz, iş birliği fırsatları veya teknik sohbetler için doğrudan aşağıdaki kanallardan ulaşabilirsiniz:
+        Feel free to reach out directly through any of the channels below for project inquiries, collaboration opportunities, or technical discussions:
       </p>
 
       {/* Grid of Direct Contact Cards */}

@@ -60,16 +60,16 @@ export const portfolioData = {
 
   education: [
     {
-      degree: "Lisans · Maliye Bölümü",
-      institution: "Sakarya Üniversitesi (Siyasal Bilgiler Fakültesi)",
+      degree: "Bachelor's Degree · Public Finance",
+      institution: "Sakarya University (Faculty of Political Sciences)",
       period: "2016 – 2020",
-      details: "Siyasal Bilgiler Fakültesi / Maliye Bölümü"
+      details: "Faculty of Political Sciences / Department of Public Finance"
     },
     {
-      degree: "Lise · Ortaöğretim Diploması",
-      institution: "Ağdaş ve Mingəçevir Özel Türk Lisesi",
-      period: "2012 – 2016",
-      details: "11. Sınıf Mezuniyeti"
+      degree: "High School Diploma",
+      institution: "Agdash & Mingachevir Private Turkish High School",
+      period: "2013",
+      details: "High School Graduation"
     }
   ],
 
@@ -79,9 +79,9 @@ export const portfolioData = {
   ],
 
   languages: [
-    { name: "Azerbaycan dili", level: "Ana Dili (Native)" },
-    { name: "Türkçe", level: "İleri Düzey (Native / Fluent)" },
-    { name: "İngilizce", level: "C1" },
-    { name: "Rusça", level: "Orta Seviye (Intermediate)" }
+    { name: "Azerbaijani", level: "Native" },
+    { name: "Turkish", level: "Native" },
+    { name: "English", level: "C1" },
+    { name: "Russian", level: "Intermediate" }
   ]
 };

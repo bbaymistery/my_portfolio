@@ -95,7 +95,16 @@ export default function App() {
             {/* Footer */}
             <footer className="mt-16 pb-16 text-xs text-zinc-500 lg:mt-24 lg:pb-24 border-t border-zinc-800/60 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p>
-                Built with React & Vite. Designed for performance and elegance.
+                Built with React, Vite, and Tailwind CSS. Deployed on GitHub Pages —{' '}
+                <a
+                  href="https://github.com/bbaymistery/my_portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-zinc-400 underline-offset-2 transition-colors hover:text-amber-400 hover:underline focus-visible:text-amber-400 focus-visible:underline"
+                >
+                  view source
+                </a>
+                .
               </p>
               <a
                 href="#about"
