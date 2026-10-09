@@ -31,8 +31,6 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
     { id: 'contact', label: 'Contact' }
   ];
 
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalData.social.email)}`;
-
   return (
     <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-5/12 lg:flex-col lg:justify-between lg:py-24">
       <div>
@@ -142,12 +140,10 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
           </li>
           <li>
             <a
-              href={gmailComposeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open Gmail"
+              href={`mailto:${personalData.social.email}`}
+              aria-label="Send Email"
               className="text-zinc-400 hover:text-amber-400 transition-colors p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:border-amber-500/40 block"
-              title="Send Gmail"
+              title="Email"
             >
               <Mail className="h-5 w-5" />
             </a>

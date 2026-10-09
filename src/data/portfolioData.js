@@ -45,16 +45,63 @@ export const portfolioData = {
 
   skillsCategorized: [
     {
-      category: "Programming & Web Development",
-      skills: ["JavaScript", "TypeScript", "Python", "React", "Node.js", "HTML5 & CSS3", "Tailwind CSS"]
+      category: "Frontend & State Management",
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "HTML5 / CSS3 / SCSS",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Zustand",
+        "Material UI (MUI)",
+        "Ant Design",
+        "Styled Components"
+      ]
     },
     {
-      category: "Databases & Backend Stack",
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "REST APIs", "GraphQL", "Express.js"]
+      category: "Backend & Microservices",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "NestJS",
+        "Microservices Architecture",
+        "WebSockets / Socket.io",
+        "RESTful APIs",
+        "GraphQL"
+      ]
     },
     {
-      category: "DevOps & Tools",
-      skills: ["Git & GitHub", "Docker", "Linux CLI", "Vite", "Webpack", "Postman"]
+      category: "Databases & ORMs",
+      skills: [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Prisma",
+        "TypeORM",
+        "Neon DB"
+      ]
+    },
+    {
+      category: "Testing & Quality Assurance",
+      skills: [
+        "Cypress",
+        "Playwright",
+        "Unit Testing",
+        "Integration Testing",
+        "End-to-End (E2E) Testing"
+      ]
+    },
+    {
+      category: "Cloud, Infrastructure & Optimization",
+      skills: [
+        "AWS",
+        "Cloudinary",
+        "Docker",
+        "Git / GitHub",
+        "Performance Optimization",
+        "Core Web Vitals"
+      ]
     }
   ],
 
