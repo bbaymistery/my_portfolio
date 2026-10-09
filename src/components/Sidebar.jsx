@@ -111,7 +111,7 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
         </nav>
       </div>
 
-      {/* Social Icons & Contact Links */}
+      {/* Social Icons with Official Brand Colors */}
       <div className="mt-12 lg:mt-0">
         <ul className="flex items-center gap-4 flex-wrap" aria-label="Social media">
           <li>
@@ -120,10 +120,10 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profile"
-              className="text-zinc-400 hover:text-amber-400 transition-colors p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:border-amber-500/40 block"
+              className="text-zinc-300 hover:text-purple-400 transition-all duration-200 p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:bg-purple-500/10 hover:border-purple-500/50 block shadow-sm"
               title="GitHub"
             >
-              <GithubIcon className="h-5 w-5" />
+              <GithubIcon className="h-5 w-5 text-purple-400" />
             </a>
           </li>
           <li>
@@ -132,20 +132,20 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
-              className="text-zinc-400 hover:text-amber-400 transition-colors p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:border-amber-500/40 block"
+              className="text-zinc-300 hover:text-blue-400 transition-all duration-200 p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:bg-blue-500/10 hover:border-blue-500/50 block shadow-sm"
               title="LinkedIn"
             >
-              <LinkedinIcon className="h-5 w-5" />
+              <LinkedinIcon className="h-5 w-5 text-blue-400" />
             </a>
           </li>
           <li>
             <a
               href={`mailto:${personalData.social.email}`}
               aria-label="Send Email"
-              className="text-zinc-400 hover:text-amber-400 transition-colors p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:border-amber-500/40 block"
+              className="text-zinc-300 hover:text-red-400 transition-all duration-200 p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:bg-red-500/10 hover:border-red-500/50 block shadow-sm"
               title="Email"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-5 w-5 text-red-400" />
             </a>
           </li>
           <li>
@@ -154,10 +154,10 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp Contact"
-              className="text-zinc-400 hover:text-emerald-400 transition-colors p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:border-emerald-500/40 block"
+              className="text-zinc-300 hover:text-emerald-400 transition-all duration-200 p-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:bg-emerald-500/10 hover:border-emerald-500/50 block shadow-sm"
               title="WhatsApp"
             >
-              <WhatsappIcon className="h-5 w-5" />
+              <WhatsappIcon className="h-5 w-5 text-emerald-400" />
             </a>
           </li>
         </ul>
