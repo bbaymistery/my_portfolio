@@ -34,12 +34,23 @@ export default function EducationSection({ education, languages }) {
                   <span className="block text-xs md:text-sm text-amber-400 font-medium mt-0.5">
                     {edu.institution}
                   </span>
-                  {edu.details && (
+                  
+                  {/* Single line details or multi bullet points */}
+                  {edu.bullets && edu.bullets.length > 0 ? (
+                    <ul className="mt-3 space-y-1.5 list-disc list-inside text-xs text-zinc-400 leading-relaxed">
+                      {edu.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="marker:text-amber-400">
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : edu.details ? (
                     <p className="mt-2 text-xs text-zinc-400 leading-relaxed italic">
                       {edu.details}
                     </p>
-                  )}
+                  ) : null}
                 </div>
+
                 <span className="font-mono text-xs uppercase tracking-wide text-zinc-500 mt-2 sm:mt-0">
                   {edu.period}
                 </span>

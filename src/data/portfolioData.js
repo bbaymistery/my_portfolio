@@ -1,9 +1,9 @@
 export const portfolioData = {
   personal: {
-    name: "Elgün Ezmememdov",
+    name: "Elgün Əzməmmədov",
     title: "Software & Data Engineer",
-    subtitle: "Sakarya Üniversitesi Alumnus",
-    tagline: "Building scalable platforms, modern web systems, and data pipelines.",
+    subtitle: "Sakarya University Alumnus",
+    tagline: "Building scalable platforms, modern web systems, and data-driven architectures.",
     avatar: "/avatar.jpg",
     location: "Azerbaijan",
     aboutParagraphs: [
@@ -53,6 +53,7 @@ export const portfolioData = {
         "HTML5 / CSS3 / SCSS",
         "Tailwind CSS",
         "Redux Toolkit",
+        "Redux Thunk",
         "Zustand",
         "Material UI (MUI)",
         "Ant Design",
@@ -60,26 +61,39 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Backend & Microservices",
+      category: "Backend, Microservices & Architecture",
       skills: [
         "Node.js",
         "Express.js",
         "NestJS",
         "Microservices Architecture",
+        "Monorepo",
         "WebSockets / Socket.io",
         "RESTful APIs",
         "GraphQL"
       ]
     },
     {
-      category: "Databases & ORMs",
+      category: "Databases, ORMs & NoSQL",
       skills: [
         "PostgreSQL",
         "MongoDB",
+        "NoSQL",
         "Redis",
         "Prisma",
         "TypeORM",
         "Neon DB"
+      ]
+    },
+    {
+      category: "AI, LLMs & AI Tools",
+      skills: [
+        "LLM",
+        "AI Integration",
+        "MCP (Model Context Protocol)",
+        "Antigravity",
+        "Cursor",
+        "Claude"
       ]
     },
     {
@@ -107,10 +121,14 @@ export const portfolioData = {
 
   education: [
     {
-      degree: "Bachelor's Degree · Public Finance",
-      institution: "Sakarya University (Faculty of Political Sciences)",
-      period: "2016 – 2020",
-      details: "Faculty of Political Sciences / Department of Public Finance"
+      degree: "Bachelor in Public Finance",
+      institution: "Sakarya University, Turkey",
+      period: "Sept 2016 – Jun 2020",
+      bullets: [
+        "Graduated with a Cumulative GPA of 3.2/4.0.",
+        "Twice awarded the Honor Certificate for outstanding academic excellence.",
+        "Utilized core university foundations in quantitative analysis, economics, and structured logic to build strong data-driven problem-solving skills that directly enhance complex frontend system architecture."
+      ]
     },
     {
       degree: "High School Diploma",
@@ -118,11 +136,6 @@ export const portfolioData = {
       period: "2013",
       details: "High School Graduation"
     }
-  ],
-
-  certifications: [
-    { title: "Full Stack Web Development Certification", date: "2023" },
-    { title: "Modern Data Engineering & Analytics", date: "2022" }
   ],
 
   languages: [
