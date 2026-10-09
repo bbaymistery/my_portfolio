@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Code, Cloud, Database, Layers } from 'lucide-react';
+import { Code, Layers, Cloud, Database, Cpu, Zap, CheckCircle, Sparkles } from 'lucide-react';
 
 export default function SkillsSection({ skillsCategorized }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -7,10 +7,14 @@ export default function SkillsSection({ skillsCategorized }) {
   const categories = ['All', ...skillsCategorized.map((c) => c.category)];
 
   const getCategoryIcon = (categoryName) => {
-    if (categoryName.includes('Programming')) return <Code className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Data Stack')) return <Layers className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Cloud')) return <Cloud className="h-4 w-4 text-amber-400" />;
-    return <Database className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Frontend')) return <Code className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('State')) return <Layers className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Performance') || categoryName.includes('Rendering')) return <Zap className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Backend') || categoryName.includes('Architecture')) return <Cpu className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Database')) return <Database className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Build') || categoryName.includes('Cloud')) return <Cloud className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Testing')) return <CheckCircle className="h-4 w-4 text-amber-400" />;
+    return <Sparkles className="h-4 w-4 text-amber-400" />;
   };
 
   const filteredCategories = selectedCategory === 'All'

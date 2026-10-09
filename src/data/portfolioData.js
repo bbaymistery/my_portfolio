@@ -45,19 +45,39 @@ export const portfolioData = {
 
   skillsCategorized: [
     {
-      category: "Frontend & State Management",
+      category: "Frontend & UI Engineering",
       skills: [
         "React",
         "Next.js",
+        "React Native",
         "TypeScript",
-        "HTML5 / CSS3 / SCSS",
+        "HTML5 / CSS3",
+        "Sass / SCSS",
         "Tailwind CSS",
-        "Redux Toolkit",
-        "Redux Thunk",
-        "Zustand",
         "Material UI (MUI)",
         "Ant Design",
-        "Styled Components"
+        "Styled Components",
+        "Figma",
+        "Accessibility (WCAG 2.1)"
+      ]
+    },
+    {
+      category: "State Management & Data Fetching",
+      skills: [
+        "TanStack Query (React Query)",
+        "Context API",
+        "Redux Toolkit",
+        "Redux Thunk",
+        "Zustand"
+      ]
+    },
+    {
+      category: "Rendering, SEO & Performance",
+      skills: [
+        "SSR / SSG / ISR / RSC",
+        "Technical SEO",
+        "Performance Optimization",
+        "Core Web Vitals"
       ]
     },
     {
@@ -74,10 +94,11 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Databases, ORMs & NoSQL",
+      category: "Databases, ORMs & ODM",
       skills: [
         "PostgreSQL",
         "MongoDB",
+        "Mongoose",
         "NoSQL",
         "Redis",
         "Prisma",
@@ -86,19 +107,17 @@ export const portfolioData = {
       ]
     },
     {
-      category: "AI, LLMs & AI Tools",
+      category: "Build Tools, CI/CD & Testing",
       skills: [
-        "LLM",
-        "AI Integration",
-        "MCP (Model Context Protocol)",
-        "Antigravity",
-        "Cursor",
-        "Claude"
-      ]
-    },
-    {
-      category: "Testing & Quality Assurance",
-      skills: [
+        "Webpack",
+        "Vite",
+        "Babel",
+        "Version Control Systems (Git / GitHub)",
+        "CI/CD Systems",
+        "Deployment Pipelines",
+        "Docker",
+        "AWS",
+        "Cloudinary",
         "Cypress",
         "Playwright",
         "Unit Testing",
@@ -107,14 +126,24 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Cloud, Infrastructure & Optimization",
+      category: "AI Integration & Workflow Tools",
       skills: [
-        "AWS",
-        "Cloudinary",
-        "Docker",
-        "Git / GitHub",
-        "Performance Optimization",
-        "Core Web Vitals"
+        "LLM Integration",
+        "AI Integration",
+        "MCP (Model Context Protocol)",
+        "Antigravity",
+        "Cursor",
+        "Claude"
+      ]
+    },
+    {
+      category: "Agile & Team Collaboration",
+      skills: [
+        "Agile / Scrum",
+        "Task Refinement",
+        "Backlog Prioritization",
+        "Cross-functional Collaboration",
+        "Interpersonal Communication"
       ]
     }
   ],
