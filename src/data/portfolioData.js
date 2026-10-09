@@ -65,6 +65,7 @@ export const portfolioData = {
       category: "State Management & Data Fetching",
       skills: [
         "TanStack Query (React Query)",
+        "RTK Query",
         "Context API",
         "Redux Toolkit",
         "Redux Thunk",
@@ -75,18 +76,20 @@ export const portfolioData = {
       category: "Rendering, SEO & Performance",
       skills: [
         "SSR / SSG / ISR / RSC",
-        "Technical SEO",
+        "Technical SEO / GEO",
         "Performance Optimization",
-        "Core Web Vitals"
+        "Core Web Vitals",
+        "Debugging & Troubleshooting"
       ]
     },
     {
-      category: "Backend, Microservices & Architecture",
+      category: "Backend, Microservices & Messaging",
       skills: [
         "Node.js",
         "Express.js",
         "NestJS",
         "Microservices Architecture",
+        "Message Queues",
         "Monorepo",
         "WebSockets / Socket.io",
         "RESTful APIs",
@@ -107,17 +110,28 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Build Tools, CI/CD & Testing",
+      category: "Build Tools & Bundlers",
       skills: [
         "Webpack",
         "Vite",
-        "Babel",
+        "Babel"
+      ]
+    },
+    {
+      category: "CI/CD, Infrastructure & Cloud",
+      skills: [
         "Version Control Systems (Git / GitHub)",
         "CI/CD Systems",
         "Deployment Pipelines",
         "Docker",
         "AWS",
-        "Cloudinary",
+        "Cloudinary"
+      ]
+    },
+    {
+      category: "Testing & Quality Assurance",
+      skills: [
+        "Jest",
         "Cypress",
         "Playwright",
         "Unit Testing",
@@ -126,9 +140,10 @@ export const portfolioData = {
       ]
     },
     {
-      category: "AI Integration & Workflow Tools",
+      category: "AI Integration & LLMOps",
       skills: [
         "LLM Integration",
+        "Large Language Model Operations (LLMOps)",
         "AI Integration",
         "MCP (Model Context Protocol)",
         "Antigravity",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Layers, Cloud, Database, Cpu, Zap, CheckCircle, Sparkles } from 'lucide-react';
+import { Code, Layers, Cloud, Database, Cpu, Zap, CheckCircle, Sparkles, Wrench, ShieldCheck, Users } from 'lucide-react';
 
 export default function SkillsSection({ skillsCategorized }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -9,12 +9,14 @@ export default function SkillsSection({ skillsCategorized }) {
   const getCategoryIcon = (categoryName) => {
     if (categoryName.includes('Frontend')) return <Code className="h-4 w-4 text-amber-400" />;
     if (categoryName.includes('State')) return <Layers className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Performance') || categoryName.includes('Rendering')) return <Zap className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Backend') || categoryName.includes('Architecture')) return <Cpu className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Database')) return <Database className="h-4 w-4 text-amber-400" />;
-    if (categoryName.includes('Build') || categoryName.includes('Cloud')) return <Cloud className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Rendering') || categoryName.includes('SEO')) return <Zap className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Backend') || categoryName.includes('Microservices')) return <Cpu className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Databases')) return <Database className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('Build Tools')) return <Wrench className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('CI/CD') || categoryName.includes('Cloud')) return <Cloud className="h-4 w-4 text-amber-400" />;
     if (categoryName.includes('Testing')) return <CheckCircle className="h-4 w-4 text-amber-400" />;
-    return <Sparkles className="h-4 w-4 text-amber-400" />;
+    if (categoryName.includes('AI') || categoryName.includes('LLM')) return <Sparkles className="h-4 w-4 text-amber-400" />;
+    return <Users className="h-4 w-4 text-amber-400" />;
   };
 
   const filteredCategories = selectedCategory === 'All'
