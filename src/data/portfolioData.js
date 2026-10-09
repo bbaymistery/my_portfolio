@@ -51,6 +51,8 @@ export const portfolioData = {
         "Next.js",
         "React Native",
         "TypeScript",
+        "Micro Frontends (MFE)",
+        "Module Federation",
         "HTML5 / CSS3",
         "Sass / SCSS",
         "Tailwind CSS",
@@ -87,20 +89,16 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Backend, Microservices & Security",
+      category: "Backend & Microservices Architecture",
       skills: [
         "Node.js",
         "Express.js",
         "NestJS",
         "Microservices Architecture",
-        "Micro Frontends (MFE)",
-        "Module Federation",
         "API Gateway",
         "JWT / OAuth2 / Auth0",
         "Message Queues",
-        "Monorepo (Turborepo / Nx)",
         "WebSockets / Socket.io",
-        "RESTful APIs",
         "GraphQL"
       ]
     },
@@ -119,8 +117,9 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Build Tools & Bundlers",
+      category: "Build Tools & Monorepo",
       skills: [
+        "Turborepo / Nx",
         "Webpack",
         "Vite",
         "Babel"
@@ -129,9 +128,9 @@ export const portfolioData = {
     {
       category: "CI/CD, Infrastructure & Cloud",
       skills: [
+        "GitHub Actions",
+        "GitLab CI",
         "Version Control Systems (Git / GitHub)",
-        "CI/CD Systems",
-        "Deployment Pipelines",
         "Docker",
         "AWS",
         "Cloudinary"
@@ -153,7 +152,6 @@ export const portfolioData = {
       skills: [
         "LLM Integration",
         "Large Language Model Operations (LLMOps)",
-        "AI Integration",
         "MCP (Model Context Protocol)",
         "Antigravity",
         "Cursor",
