@@ -22,7 +22,7 @@ const WhatsappIcon = ({ className = "h-5 w-5" }) => (
   </svg>
 );
 
-export default function Sidebar({ activeSection, theme, toggleTheme, personalData }) {
+export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme, personalData }) {
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
@@ -85,6 +85,7 @@ export default function Sidebar({ activeSection, theme, toggleTheme, personalDat
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}
+                    onClick={() => onNavClick && onNavClick(item.id)}
                     className="group flex items-center py-2.5"
                   >
                     <span

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from './components/Sidebar';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
@@ -11,6 +11,9 @@ import { portfolioData } from './data/portfolioData';
 export default function App() {
   const [theme, setTheme] = useState('dark');
   const [activeSection, setActiveSection] = useState('about');
+  
+  const isManualClickRef = useRef(false);
+  const clickTimeoutRef = useRef(null);
 
   // Toggle Dark / Light Theme
   const toggleTheme = () => {
@@ -25,59 +28,59 @@ export default function App() {
     document.documentElement.classList.add('dark');
   }, []);
 
-  // Robust scroll tracking algorithm that accurately updates active section even for very long sections
-  useEffect(() => {
-    let isManualClick = false;
-    let clickTimeout;
+  // Handle direct navigation link clicks with temporary auto-scroll lock
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId);
+    isManualClickRef.current = true;
+    clearTimeout(clickTimeoutRef.current);
+    clickTimeoutRef.current = setTimeout(() => {
+      isManualClickRef.current = false;
+    }, 1200);
+  };
 
+  // Mathematical scroll tracking algorithm for tall sections
+  useEffect(() => {
     const handleScroll = () => {
-      if (isManualClick) return;
+      if (isManualClickRef.current) return;
 
       const sections = ['about', 'experience', 'skills', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 160;
 
-      // Bottom of page check
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+      // Check if user is near bottom of page
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const thresholdBottom = document.documentElement.scrollHeight - 60;
+      if (scrollPosition >= thresholdBottom) {
         setActiveSection('contact');
         return;
       }
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const sectionEl = document.getElementById(sections[i]);
-        if (sectionEl) {
-          const top = sectionEl.offsetTop;
-          if (scrollPosition >= top - 60) {
-            setActiveSection(sections[i]);
-            break;
+      // Check if user is near top of page
+      if (window.scrollY < 100) {
+        setActiveSection('about');
+        return;
+      }
+
+      const viewportTarget = window.innerHeight * 0.35;
+      let currentSection = 'about';
+
+      for (let i = 0; i < sections.length; i++) {
+        const el = document.getElementById(sections[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= viewportTarget) {
+            currentSection = sections[i];
           }
         }
       }
-    };
 
-    const handleNavClick = (e) => {
-      const anchor = e.target.closest('a');
-      const href = anchor?.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        const id = href.slice(1);
-        if (['about', 'experience', 'skills', 'education', 'contact'].includes(id)) {
-          isManualClick = true;
-          setActiveSection(id);
-          clearTimeout(clickTimeout);
-          clickTimeout = setTimeout(() => {
-            isManualClick = false;
-          }, 850);
-        }
-      }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleNavClick);
     handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleNavClick);
-      clearTimeout(clickTimeout);
+      clearTimeout(clickTimeoutRef.current);
     };
   }, []);
 
@@ -101,6 +104,7 @@ export default function App() {
           {/* Left Column (Sticky Sidebar) */}
           <Sidebar
             activeSection={activeSection}
+            onNavClick={handleNavClick}
             theme={theme}
             toggleTheme={toggleTheme}
             personalData={portfolioData.personal}
