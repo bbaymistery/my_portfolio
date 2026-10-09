@@ -54,6 +54,8 @@ export const portfolioData = {
         "HTML5 / CSS3",
         "Sass / SCSS",
         "Tailwind CSS",
+        "Shadcn UI / Radix Primitives",
+        "Storybook",
         "Material UI (MUI)",
         "Ant Design",
         "Styled Components",
@@ -76,6 +78,8 @@ export const portfolioData = {
       category: "Rendering, SEO & Performance",
       skills: [
         "SSR / SSG / ISR / RSC",
+        "Streaming SSR",
+        "Partial Hydration",
         "Technical SEO / GEO",
         "Performance Optimization",
         "Core Web Vitals",
@@ -83,26 +87,31 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Backend, Microservices & Messaging",
+      category: "Backend, Microservices & Security",
       skills: [
         "Node.js",
         "Express.js",
         "NestJS",
         "Microservices Architecture",
+        "Micro Frontends (MFE)",
+        "Module Federation",
+        "API Gateway",
+        "JWT / OAuth2 / Auth0",
         "Message Queues",
-        "Monorepo",
+        "Monorepo (Turborepo / Nx)",
         "WebSockets / Socket.io",
         "RESTful APIs",
         "GraphQL"
       ]
     },
     {
-      category: "Databases, ORMs & ODM",
+      category: "Databases, BaaS & ORMs",
       skills: [
         "PostgreSQL",
         "MongoDB",
         "Mongoose",
         "NoSQL",
+        "Supabase",
         "Redis",
         "Prisma",
         "TypeORM",
@@ -152,9 +161,10 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Agile & Team Collaboration",
+      category: "Agile, Mentorship & Collaboration",
       skills: [
         "Agile / Scrum",
+        "Mentorship / Code Review",
         "Task Refinement",
         "Backlog Prioritization",
         "Cross-functional Collaboration",
