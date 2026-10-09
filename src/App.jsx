@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from './components/Sidebar';
+import MobileNav from './components/MobileNav';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
@@ -126,7 +127,7 @@ export default function App() {
             <ContactSection personalData={portfolioData.personal} />
 
             {/* Footer */}
-            <footer className="mt-16 pb-16 text-xs text-zinc-500 lg:mt-24 lg:pb-24 border-t border-zinc-800/60 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <footer className="mt-16 pb-20 text-xs text-zinc-500 lg:mt-24 lg:pb-24 border-t border-zinc-800/60 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p>
                 Built with React, Vite, and Tailwind CSS. Deployed on GitHub Pages —{' '}
                 <a
@@ -149,6 +150,9 @@ export default function App() {
           </main>
         </div>
       </div>
+
+      {/* Floating Glassmorphic Mobile Navigation Bar */}
+      <MobileNav activeSection={activeSection} onNavClick={handleNavClick} />
     </div>
   );
 }
