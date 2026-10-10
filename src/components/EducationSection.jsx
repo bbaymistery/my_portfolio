@@ -25,33 +25,34 @@ export default function EducationSection({ education, languages }) {
 
         <ul className="space-y-4">
           {education.map((edu, index) => (
-            <li key={index} className="glass-card p-5">
-              <div className="grid gap-1 sm:grid-cols-[1fr_auto] sm:items-baseline">
+            <li key={index} className="glass-card p-5 sm:p-6">
+              <div className="grid gap-2 sm:grid-cols-[1fr_auto] sm:items-baseline">
                 <div>
-                  <h4 className="font-semibold text-zinc-200 text-sm md:text-base">
+                  <h4 className="font-bold text-zinc-100 text-base sm:text-lg">
                     {edu.degree}
                   </h4>
-                  <span className="block text-xs md:text-sm text-amber-400 font-medium mt-0.5">
+                  <span className="block text-sm sm:text-base text-amber-400 font-semibold mt-0.5">
                     {edu.institution}
                   </span>
                   
                   {/* Single line details or multi bullet points */}
                   {edu.bullets && edu.bullets.length > 0 ? (
-                    <ul className="mt-3 space-y-1.5 list-disc list-inside text-xs text-zinc-400 leading-relaxed">
+                    <ul className="mt-3.5 space-y-2 text-xs sm:text-sm text-zinc-200 leading-relaxed">
                       {edu.bullets.map((bullet, bIdx) => (
-                        <li key={bIdx} className="marker:text-amber-400">
-                          {bullet}
+                        <li key={bIdx} className="flex items-start gap-2.5">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                          <span className="leading-relaxed text-zinc-200">{bullet}</span>
                         </li>
                       ))}
                     </ul>
                   ) : edu.details ? (
-                    <p className="mt-2 text-xs text-zinc-400 leading-relaxed italic">
+                    <p className="mt-2 text-xs sm:text-sm text-zinc-300 leading-relaxed italic">
                       {edu.details}
                     </p>
                   ) : null}
                 </div>
 
-                <span className="font-mono text-xs uppercase tracking-wide text-zinc-500 mt-2 sm:mt-0">
+                <span className="font-mono text-xs sm:text-sm font-bold tracking-wide text-zinc-400 mt-2 sm:mt-0">
                   {edu.period}
                 </span>
               </div>

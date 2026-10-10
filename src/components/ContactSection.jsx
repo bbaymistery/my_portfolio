@@ -28,36 +28,40 @@ export default function ContactSection({ personalData }) {
       title: "Email",
       value: personalData.social.email,
       href: `mailto:${personalData.social.email}`,
-      icon: <Mail className="h-5 w-5 text-amber-400" />,
+      icon: <Mail className="h-5 w-5 icon-email" />,
       badge: "Send Email",
-      hoverBorder: "hover:border-amber-500/50"
+      hoverBorder: "hover:border-red-500/50",
+      socialClass: "social-email"
     },
     {
       title: "WhatsApp",
       value: personalData.social.whatsappDisplay,
       href: personalData.social.whatsapp,
-      icon: <WhatsappIcon className="h-5 w-5 text-emerald-400" />,
+      icon: <WhatsappIcon className="h-5 w-5 icon-whatsapp" />,
       badge: "Open WhatsApp",
       hoverBorder: "hover:border-emerald-500/50",
-      external: true
+      external: true,
+      socialClass: "social-whatsapp"
     },
     {
       title: "LinkedIn",
       value: "Elgun Ezmemmedov",
       href: personalData.social.linkedin,
-      icon: <LinkedinIcon className="h-5 w-5 text-blue-400" />,
+      icon: <LinkedinIcon className="h-5 w-5 icon-linkedin" />,
       badge: "View Profile",
       hoverBorder: "hover:border-blue-500/50",
-      external: true
+      external: true,
+      socialClass: "social-linkedin"
     },
     {
       title: "GitHub",
       value: "bbaymistery",
       href: personalData.social.github,
-      icon: <GithubIcon className="h-5 w-5 text-purple-400" />,
+      icon: <GithubIcon className="h-5 w-5 icon-github" />,
       badge: "View Repositories",
       hoverBorder: "hover:border-purple-500/50",
-      external: true
+      external: true,
+      socialClass: "social-github"
     }
   ];
 
@@ -74,7 +78,7 @@ export default function ContactSection({ personalData }) {
       </div>
 
       <p className="text-zinc-400 leading-relaxed text-sm md:text-base mb-8">
-        Feel free to reach out directly through any of the channels below for project inquiries, collaboration opportunities, or technical discussions:
+        I'm always open to discussing new projects, exploring creative ideas, and connecting over exciting opportunities. Let's connect!
       </p>
 
       {/* Grid of Direct Contact Cards */}
@@ -85,11 +89,11 @@ export default function ContactSection({ personalData }) {
             href={item.href}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener noreferrer" : undefined}
-            className={`glass-card p-5 block group ${item.hoverBorder} transition-all duration-300 hover:-translate-y-1`}
+            className={`glass-card glass-card-interactive p-5 block group ${item.hoverBorder} transition-all duration-300 hover:-translate-y-1`}
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-zinc-900/80 border border-zinc-800">
+                <div className={`p-2 rounded-lg social-icon-box ${item.socialClass} bg-zinc-900/80 border border-zinc-800`}>
                   {item.icon}
                 </div>
                 <h3 className="font-semibold text-zinc-200 text-sm">

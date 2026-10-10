@@ -41,10 +41,10 @@ export default function SkillsSection({ skillsCategorized }) {
           <button
             key={idx}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer border ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
               selectedCategory === cat
-                ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-sm'
-                : 'bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:text-zinc-200 hover:bg-zinc-800'
+                ? 'bg-amber-400 text-zinc-950 border-amber-400 font-bold shadow-md scale-105'
+                : 'bg-zinc-900/60 text-zinc-300 border-zinc-800 hover:text-zinc-100 hover:bg-zinc-800'
             }`}
           >
             {cat}
@@ -55,10 +55,10 @@ export default function SkillsSection({ skillsCategorized }) {
       {/* Categorized Skills List */}
       <div className="space-y-6">
         {filteredCategories.map((group, index) => (
-          <div key={index} className="glass-card p-5">
+          <div key={index} className="glass-card p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4 pb-2 border-b border-zinc-800/60">
               {getCategoryIcon(group.category)}
-              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-300">
+              <h3 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-200">
                 {group.category}
               </h3>
             </div>

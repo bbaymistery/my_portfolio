@@ -23,11 +23,15 @@ export default function AboutSection({ personalData }) {
       {/* Highlights / Key Stats Grid */}
       <dl className="mt-10 grid grid-cols-3 gap-2 sm:gap-6 border-t border-zinc-800/80 pt-8">
         {personalData.stats.map((stat, index) => (
-          <div key={index} className="glass-card p-3 sm:p-4 text-center sm:text-left">
+          <div key={index} className="glass-card glass-card-interactive p-3 sm:p-4 text-center sm:text-left">
             <dt className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-500">
               {stat.label}
             </dt>
-            <dd className="mt-1.5 sm:mt-2 font-mono text-2xl sm:text-4xl font-extrabold text-amber-400">
+            <dd className={`mt-1.5 sm:mt-2 font-mono font-extrabold text-amber-400 ${
+              stat.value.length > 8
+                ? 'text-xs sm:text-sm md:text-base leading-tight font-sans'
+                : 'text-2xl sm:text-4xl'
+            }`}>
               {stat.value}
             </dd>
           </div>

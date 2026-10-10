@@ -3,6 +3,15 @@ import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function ExperienceSection({ experiences }) {
   const [showAll, setShowAll] = useState(false);
+  const [expandedMap, setExpandedMap] = useState({});
+
+  const toggleExpand = (idx) => {
+    setExpandedMap((prev) => ({
+      ...prev,
+      [idx]: !prev[idx]
+    }));
+  };
+
   const displayedExperiences = showAll ? experiences : experiences.slice(0, 5);
 
   return (
@@ -17,81 +26,113 @@ export default function ExperienceSection({ experiences }) {
         </h2>
       </div>
 
-      <ol className="group/list space-y-8">
-        {displayedExperiences.map((exp, index) => (
-          <li key={index}>
-            <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 glass-card p-4 sm:p-6 hover:!opacity-100 lg:group-hover/list:opacity-60">
-              {/* Date Column */}
-              <header
-                className="z-10 mb-2 mt-1 text-xs font-mono font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"
-                aria-label={exp.period}
-              >
-                <div>{exp.period}</div>
-                {exp.location && (
-                  <div className="mt-1 text-[11px] normal-case font-sans text-zinc-400 font-medium">
-                    📍 {exp.location}
-                  </div>
-                )}
-              </header>
+      <ol className="group/list space-y-6">
+        {displayedExperiences.map((exp, index) => {
+          const isExpanded = !!expandedMap[index];
 
-              {/* Main Info Column */}
-              <div className="z-10 sm:col-span-6">
-                <h3 className="font-semibold leading-snug text-zinc-200">
-                  <a
-                    href={exp.companyUrl || "#"}
-                    target={exp.companyUrl && exp.companyUrl !== "#" ? "_blank" : undefined}
-                    rel={exp.companyUrl && exp.companyUrl !== "#" ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-baseline font-semibold leading-tight text-zinc-100 hover:text-amber-400 focus-visible:text-amber-400 group/link transition-colors"
+          return (
+            <li key={index}>
+              <div className="group relative glass-card p-5 sm:p-6 transition-all border border-zinc-800 hover:border-amber-500/40">
+                {/* Header Row / Summary Info */}
+                <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                  {/* Date & Location Column */}
+                  <header
+                    className="z-10 shrink-0 sm:w-36 font-mono"
+                    aria-label={exp.period}
                   >
-                    <span>
-                      {exp.role}{' '}
-                      <span className="inline-block">
-                        · {exp.company}
-                        {exp.via && <span className="text-zinc-400 font-normal"> (via {exp.via})</span>}
-                        {exp.companyUrl && exp.companyUrl !== "#" && (
-                          <ExternalLink className="ml-1.5 inline-block h-3.5 w-3.5 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-hover/link:text-amber-400" />
-                        )}
-                      </span>
-                    </span>
-                  </a>
-                </h3>
+                    <div className="text-xs sm:text-sm font-bold tracking-wide text-zinc-200">
+                      {exp.period}
+                    </div>
+                    {exp.location && (
+                      <div className="mt-1 inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-amber-400/95 font-sans">
+                        📍 {exp.location}
+                      </div>
+                    )}
+                  </header>
 
-                {exp.description && (
-                  <p className="mt-2 text-xs sm:text-sm italic text-zinc-400 leading-relaxed">
-                    {exp.description}
-                  </p>
-                )}
+                  {/* Main Role & Description Column */}
+                  <div className="z-10 grow">
+                    <h3 className="text-base sm:text-lg font-bold leading-snug text-zinc-100">
+                      <a
+                        href={exp.companyUrl || "#"}
+                        target={exp.companyUrl && exp.companyUrl !== "#" ? "_blank" : undefined}
+                        rel={exp.companyUrl && exp.companyUrl !== "#" ? "noopener noreferrer" : undefined}
+                        className="inline-flex items-baseline font-bold leading-tight text-zinc-100 hover:text-amber-400 focus-visible:text-amber-400 group/link transition-colors"
+                      >
+                        <span>
+                          {exp.role}{' '}
+                          <span className="inline-block font-medium text-amber-400/90">
+                            · {exp.company}
+                            {exp.via && <span className="text-zinc-400 font-normal"> (via {exp.via})</span>}
+                            {exp.companyUrl && exp.companyUrl !== "#" && (
+                              <ExternalLink className="ml-1.5 inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-hover/link:text-amber-400" />
+                            )}
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
 
-                {exp.bullets && exp.bullets.length > 0 && (
-                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-zinc-300">
-                    {exp.bullets.map((bullet, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/80" />
-                        <span className="leading-relaxed text-zinc-300">{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                    {exp.description && (
+                      <p className="mt-2 text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                        {exp.description}
+                      </p>
+                    )}
 
-                {/* Technology Chips */}
-                {exp.technologies && exp.technologies.length > 0 && (
-                  <div className="mt-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
-                      Technologies & Skills
-                    </p>
-                    <ul className="flex flex-wrap gap-1.5" aria-label="Technologies used">
-                      {exp.technologies.map((tech, tIdx) => (
-                        <li key={tIdx}>
-                          <span className="tech-chip">{tech}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Accordion Toggle Trigger Button */}
+                    <div className="mt-4 flex items-center justify-between">
+                      <button
+                        onClick={() => toggleExpand(index)}
+                        className="exp-accordion-btn inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-amber-500/40 bg-amber-500/10 text-xs font-bold uppercase tracking-wider text-amber-400 hover:bg-amber-500/20 hover:border-amber-400 transition-all cursor-pointer shadow-sm"
+                        aria-expanded={isExpanded}
+                      >
+                        <span>{isExpanded ? "Hide Details" : "View Achievements & Tech"}</span>
+                        {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Collapsible Accordion Body */}
+                {isExpanded && (
+                  <div className="mt-6 pt-5 border-t border-zinc-800/80 animate-fade-in space-y-5">
+                    {/* Bullet Points / Achievements */}
+                    {exp.bullets && exp.bullets.length > 0 && (
+                      <div>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2.5">
+                          Key Achievements & Responsibilities
+                        </h4>
+                        <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-300">
+                          {exp.bullets.map((bullet, bIdx) => (
+                            <li key={bIdx} className="flex items-start gap-2.5">
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                              <span className="leading-relaxed text-zinc-200">{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Technologies & Skills Chips */}
+                    {exp.technologies && exp.technologies.length > 0 && (
+                      <div>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">
+                          Technologies & Skills Used
+                        </h4>
+                        <ul className="flex flex-wrap gap-1.5" aria-label="Technologies used">
+                          {exp.technologies.map((tech, tIdx) => (
+                            <li key={tIdx}>
+                              <span className="tech-chip">{tech}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ol>
 
       {/* Show More / Show Less Toggle Button */}

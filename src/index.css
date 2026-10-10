@@ -16,7 +16,7 @@
   --accent-gold: #f59e0b;
   --accent-gold-hover: #fbbf24;
   --accent-glow: rgba(245, 158, 11, 0.15);
-  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(245, 158, 11, 0.035), transparent 20%);
+  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(245, 158, 11, 0.035), transparent 35%);
   --chip-bg: rgba(39, 39, 42, 0.7);
   --chip-text: #fef08a;
   --chip-border: rgba(245, 158, 11, 0.2);
@@ -31,11 +31,15 @@ html.light {
   --border-color: rgba(212, 201, 182, 0.85);
   --border-highlight: rgba(180, 83, 9, 0.45);
 
-  --text-main: #1c1917;    /* Deep charcoal - crisp readability */
-  --text-muted: #44403c;   /* Rich dark stone */
-  --text-dim: #78716c;     /* Muted stone */
+  --text-main: #1c1917;
+  /* Deep charcoal - crisp readability */
+  --text-muted: #44403c;
+  /* Rich dark stone */
+  --text-dim: #78716c;
+  /* Muted stone */
 
-  --accent-gold: #b45309;  /* Rich amber bronze */
+  --accent-gold: #b45309;
+  /* Rich amber bronze */
   --accent-gold-hover: #92400e;
   --accent-glow: rgba(180, 83, 9, 0.12);
   --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(180, 83, 9, 0.04), transparent 75%);
@@ -104,12 +108,162 @@ html.light {
     background-color: #78716c;
   }
 
+  /* Interactive Cards in Light Mode */
+  .glass-card-interactive {
+    background-color: rgba(253, 252, 247, 0.95) !important;
+    border: 1px solid rgba(212, 201, 182, 0.85) !important;
+    transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .glass-card-interactive:hover {
+    background-color: #ffffff !important;
+    border-color: #b45309 !important;
+    box-shadow: 0 12px 28px -6px rgba(180, 83, 9, 0.16) !important;
+    transform: translateY(-4px) !important;
+  }
+
   /* Floating Mobile Nav bar */
   nav.fixed div {
     background-color: rgba(245, 242, 235, 0.95) !important;
     border-color: rgba(204, 191, 170, 0.9) !important;
     box-shadow: 0 10px 25px -5px rgba(120, 100, 70, 0.15) !important;
   }
+
+  /* Skill Chips in Light Mode */
+  .skill-chip {
+    background-color: #ffffff !important;
+    color: #1c1917 !important;
+    border: 1px solid rgba(195, 180, 155, 0.9) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .skill-chip:hover {
+    border-color: #b45309 !important;
+    color: #b45309 !important;
+    background-color: #fffdfa !important;
+  }
+
+  /* Tech Chips in Light Mode */
+  .tech-chip {
+    background-color: #fef3c7 !important;
+    color: #78350f !important;
+    border: 1px solid #fde68a !important;
+    font-weight: 600 !important;
+  }
+
+  /* Accordion Trigger Button in Light Mode */
+  .exp-accordion-btn {
+    background-color: #fef3c7 !important;
+    color: #78350f !important;
+    border: 1px solid rgba(217, 119, 6, 0.5) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 1px 3px rgba(180, 83, 9, 0.1) !important;
+  }
+
+  .exp-accordion-btn:hover {
+    background-color: #fde68a !important;
+    color: #451a03 !important;
+    border-color: #b45309 !important;
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.2) !important;
+  }
+
+  /* Social Icon Tile Boxes in Light Mode */
+  .social-icon-box {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(195, 180, 155, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .social-icon-box:hover {
+    background-color: #ffffff !important;
+    border-color: #b45309 !important;
+    transform: translateY(-4px) scale(1.08) !important;
+    box-shadow: 0 8px 20px rgba(180, 83, 9, 0.18) !important;
+  }
+
+  /* Deep Rich Official Brand Colors in Light Mode */
+  .icon-github {
+    color: #24292e !important;
+  }
+
+  .icon-linkedin {
+    color: #0a66c2 !important;
+  }
+
+  .icon-email {
+    color: #ea4335 !important;
+  }
+
+  .icon-whatsapp {
+    color: #128c7e !important;
+  }
+}
+
+.social-icon-box {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon-box:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* Social Icon Individual Brand Hover Colors (Dark & Light Mode) */
+.social-github:hover {
+  background-color: rgba(168, 85, 247, 0.15) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.25) !important;
+}
+.social-github:hover .icon-github {
+  color: #a855f7 !important;
+}
+
+.social-linkedin:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25) !important;
+}
+.social-linkedin:hover .icon-linkedin {
+  color: #3b82f6 !important;
+}
+
+.social-email:hover {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.6) !important;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25) !important;
+}
+.social-email:hover .icon-email {
+  color: #ef4444 !important;
+}
+
+.social-whatsapp:hover {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25) !important;
+}
+.social-whatsapp:hover .icon-whatsapp {
+  color: #10b981 !important;
+}
+
+/* Default Dark Mode Icon Colors */
+.icon-github {
+  color: #c084fc;
+}
+
+.icon-linkedin {
+  color: #60a5fa;
+}
+
+.icon-email {
+  color: #fbbf24;
+}
+
+.icon-whatsapp {
+  color: #34d399;
 }
 
 body {
@@ -162,13 +316,27 @@ pre,
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  background: var(--bg-card-hover);
+  background: var(--bg-card);
   border-color: var(--border-highlight);
-  box-shadow: 0 10px 30px -10px var(--accent-glow);
+  box-shadow: 0 8px 24px -8px var(--accent-glow);
+}
+
+.glass-card-interactive {
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-card-interactive:hover {
+  background-color: var(--bg-card-hover) !important;
+  border-color: var(--border-highlight) !important;
+  box-shadow: 0 12px 30px -8px var(--accent-glow) !important;
+  transform: translateY(-4px) !important;
 }
 
 .tech-chip {

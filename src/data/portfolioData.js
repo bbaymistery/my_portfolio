@@ -1,19 +1,21 @@
 export const portfolioData = {
   personal: {
     name: "Elgun Ezmemmedov",
-    title: "Software & Data Engineer",
+    title: "Frontend Engineer",
     subtitle: "Sakarya University Alumnus",
-    tagline: "Building scalable platforms, modern web systems, and data-driven architectures.",
+    tagline: "5+ years of building scalable UIs, currently expanding into cloud-driven full-stack architectures.",
     avatar: "/avatar.jpg",
     location: "Azerbaijan",
     aboutParagraphs: [
-      "I am a solution-oriented engineer passionate about building end-to-end scalable software platforms and data architectures. To process data and deliver value, one must consider the entire pipeline flow and understand business goals.",
-      "Graduated from Sakarya University Faculty of Political Sciences (Public Finance) and specialized in modern software development, data platforms, and cloud solutions."
+      "I am a frontend engineer with 5 years of professional experience building modern, scalable web applications using React, Next.js, and TypeScript.",
+      "I focus on writing clean, maintainable code, developing reliable user interfaces, and creating performant web experiences aligned with business goals. My experience includes building and maintaining production web applications, particularly booking and reservation systems and e-commerce platforms.",
+      "I am currently expanding my expertise into backend engineering with Node.js, NestJS, PostgreSQL, and modern cloud technologies, with the goal of building a stronger full-stack engineering skill set.",
+      "I value continuous learning, ownership, and thoughtful problem-solving. I am open to new challenges across diverse industries and enjoy building impactful digital products where technical quality and user experience go hand in hand."
     ],
     stats: [
       { label: "Years of experience", value: "5+" },
-      { label: "Projects Completed", value: "15+" },
-      { label: "Core Stacks", value: "Modern Web & Data" }
+      { label: "Projects Completed", value: "10+" },
+      { label: "Core Stacks", value: "React, Next.js, TypeScript" }
     ],
     social: {
       github: "https://github.com/bbaymistery",
@@ -30,7 +32,7 @@ export const portfolioData = {
       role: "React Developer",
       company: "Deirvlon Technologies",
       location: "Baku",
-      companyUrl: "#",
+      companyUrl: "https://deirvlon.com/",
       description: "Deirvlon Technologies delivers custom software solutions, saving business time and money by ensuring a perfect fit for enterprise needs.",
       bullets: [
         "Engineered a scalable React and TypeScript e-commerce application, leveraging Redux for global state management to minimize runtime errors by 30%.",
@@ -53,11 +55,11 @@ export const portfolioData = {
     },
     {
       period: "04/2022 — 05/2026",
-      role: "Next.js Developer (aplcars.com)",
+      role: "Next.js Developer ",
       company: "Airport Pickups London",
       location: "London (Remote)",
       companyUrl: "https://aplcars.com",
-      description: "",
+      description: "Since 2007, Airport Pickups London (APL) has been providing executive transfer service from all London airports.",
       bullets: [
         "Architected a production-grade Next.js and TypeScript booking engine integrated with secure Stripe/PayPal checkouts, orchestrating Redux state pipelines to process dynamic pricing and route-distance logic.",
         "Engineered a fully localized, multi-language web architecture across the entire platform, including an intuitive 'Manage Booking' dashboard for self-service reservation modifications.",
@@ -233,9 +235,9 @@ export const portfolioData = {
   ],
 
   languages: [
-    { name: "Azerbaijani", level: "Native" },
-    { name: "Turkish", level: "Native" },
+    { name: "Azerbaijani", level: "C2" },
+    { name: "Turkish", level: "C2" },
     { name: "English", level: "C1" },
-    { name: "Russian", level: "Intermediate" }
+    { name: "Russian", level: "B2" }
   ]
 };
