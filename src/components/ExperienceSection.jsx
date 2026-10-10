@@ -26,7 +26,12 @@ export default function ExperienceSection({ experiences }) {
                 className="z-10 mb-2 mt-1 text-xs font-mono font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"
                 aria-label={exp.period}
               >
-                {exp.period}
+                <div>{exp.period}</div>
+                {exp.location && (
+                  <div className="mt-1 text-[11px] normal-case font-sans text-zinc-400 font-medium">
+                    📍 {exp.location}
+                  </div>
+                )}
               </header>
 
               {/* Main Info Column */}
@@ -34,8 +39,8 @@ export default function ExperienceSection({ experiences }) {
                 <h3 className="font-semibold leading-snug text-zinc-200">
                   <a
                     href={exp.companyUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={exp.companyUrl && exp.companyUrl !== "#" ? "_blank" : undefined}
+                    rel={exp.companyUrl && exp.companyUrl !== "#" ? "noopener noreferrer" : undefined}
                     className="inline-flex items-baseline font-semibold leading-tight text-zinc-100 hover:text-amber-400 focus-visible:text-amber-400 group/link transition-colors"
                   >
                     <span>
@@ -43,7 +48,7 @@ export default function ExperienceSection({ experiences }) {
                       <span className="inline-block">
                         · {exp.company}
                         {exp.via && <span className="text-zinc-400 font-normal"> (via {exp.via})</span>}
-                        {exp.companyUrl && (
+                        {exp.companyUrl && exp.companyUrl !== "#" && (
                           <ExternalLink className="ml-1.5 inline-block h-3.5 w-3.5 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-hover/link:text-amber-400" />
                         )}
                       </span>
@@ -51,18 +56,38 @@ export default function ExperienceSection({ experiences }) {
                   </a>
                 </h3>
 
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  {exp.description}
-                </p>
+                {exp.description && (
+                  <p className="mt-2 text-xs sm:text-sm italic text-zinc-400 leading-relaxed">
+                    {exp.description}
+                  </p>
+                )}
+
+                {exp.bullets && exp.bullets.length > 0 && (
+                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-zinc-300">
+                    {exp.bullets.map((bullet, bIdx) => (
+                      <li key={bIdx} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/80" />
+                        <span className="leading-relaxed text-zinc-300">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Technology Chips */}
-                <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Technologies used">
-                  {exp.technologies.map((tech, tIdx) => (
-                    <li key={tIdx}>
-                      <span className="tech-chip">{tech}</span>
-                    </li>
-                  ))}
-                </ul>
+                {exp.technologies && exp.technologies.length > 0 && (
+                  <div className="mt-4">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+                      Technologies & Skills
+                    </p>
+                    <ul className="flex flex-wrap gap-1.5" aria-label="Technologies used">
+                      {exp.technologies.map((tech, tIdx) => (
+                        <li key={tIdx}>
+                          <span className="tech-chip">{tech}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </li>

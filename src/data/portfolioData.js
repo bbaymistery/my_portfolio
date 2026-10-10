@@ -1,6 +1,6 @@
 export const portfolioData = {
   personal: {
-    name: "Elgün Əzməmmədov",
+    name: "Elgun Ezmemmedov",
     title: "Software & Data Engineer",
     subtitle: "Sakarya University Alumnus",
     tagline: "Building scalable platforms, modern web systems, and data-driven architectures.",
@@ -26,21 +26,63 @@ export const portfolioData = {
 
   experiences: [
     {
-      period: "2024 — Present",
-      role: "Senior Software & Data Engineer",
-      company: "Enterprise Solutions",
+      period: "04/2021 — 11/2021",
+      role: "React Developer",
+      company: "Deirvlon Technologies",
+      location: "Baku",
       companyUrl: "#",
-      description: "Architecting scalable web applications, RESTful services, microservices, and database pipelines using modern JavaScript, Python, and cloud infrastructure.",
-      technologies: ["React", "Node.js", "TypeScript", "Python", "SQL", "Docker", "Tailwind CSS"]
+      description: "Deirvlon Technologies delivers custom software solutions, saving business time and money by ensuring a perfect fit for enterprise needs.",
+      bullets: [
+        "Engineered a scalable React and TypeScript e-commerce application, leveraging Redux for global state management to minimize runtime errors by 30%.",
+        "Designed fully responsive, mobile-first interfaces using modern SCSS and Tailwind CSS methodologies, driving a 25% increase in user engagement.",
+        "Refactored front-end architecture to accelerate website speed, achieving a 90+ Lighthouse score and cutting page rendering times by 1.5 seconds to lower bounce rates.",
+        "Integrated front-end components with RESTful APIs and GraphQL endpoints, enabling dynamic real-time data fetching and a secure checkout pipeline."
+      ],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Context API",
+        "Accessibility (WCAG)",
+        "SCSS",
+        "Tailwind CSS",
+        "RESTful APIs",
+        "GraphQL",
+        "Performance Optimization"
+      ]
     },
     {
-      period: "2021 — 2024",
-      role: "Software Developer & Data Specialist",
-      company: "Tech Systems",
-      companyUrl: "#",
-      description: "Developed full-stack web applications, optimized database schemas, built automated data collection flows, and integrated third-party API services.",
-      technologies: ["JavaScript", "React", "PostgreSQL", "REST APIs", "Git", "Linux"]
-    }
+      period: "04/2022 — 05/2026",
+      role: "Next.js Developer (aplcars.com)",
+      company: "Airport Pickups London",
+      location: "London (Remote)",
+      companyUrl: "https://aplcars.com",
+      description: "",
+      bullets: [
+        "Architected a production-grade Next.js and TypeScript booking engine integrated with secure Stripe/PayPal checkouts, orchestrating Redux state pipelines to process dynamic pricing and route-distance logic.",
+        "Engineered a fully localized, multi-language web architecture across the entire platform, including an intuitive 'Manage Booking' dashboard for self-service reservation modifications.",
+        "Spearheaded an AI-powered corporate subdomain integrating OpenAI (GPT-4) for automated SEO text generation while engineering a dedicated B2B agency platform with secure authentication.",
+        "Implemented Server-Side Rendering (SSR) and HTTP caching policies to boost SEO visibility and significantly reduce initial page load times across key pages by up to 20%.",
+        "Translated Figma designs into responsive, pixel-perfect UI components across mobile and desktop platforms using lightweight custom Vanilla JavaScript components.",
+        "Streamlined CI/CD and staging workflows using Netlify and GitHub, while optimizing Core Web Vitals (LCP, CLS) and increasing Lighthouse performance scores to 90+."
+      ],
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "Context API",
+        "Accessibility (WCAG)",
+        "SSR / SEO",
+        "OpenAI (GPT-4)",
+        "RESTful APIs",
+        "Vanilla JavaScript",
+        "Netlify",
+        "CI/CD",
+        "Figma"
+      ]
+    },
+
   ],
 
   skillsCategorized: [

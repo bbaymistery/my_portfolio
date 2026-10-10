@@ -47,7 +47,7 @@ export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme,
 
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl border border-zinc-700/50 bg-zinc-800/40 text-amber-400 hover:text-amber-300 hover:bg-zinc-800 hover:border-amber-500/40 transition-all duration-200 cursor-pointer shadow-md flex items-center gap-2 text-xs font-medium"
+            className="p-2.5 rounded-xl border border-zinc-700/50 bg-zinc-800/40 text-amber-400 hover:text-amber-300 hover:bg-zinc-800 hover:border-amber-500/40 transition-all duration-200 cursor-pointer shadow-md flex items-center gap-2 text-xs font-semibold"
             aria-label="Toggle theme"
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
           >
@@ -58,21 +58,21 @@ export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme,
               </>
             ) : (
               <>
-                <Moon className="h-4 w-4 text-zinc-700" />
-                <span className="hidden sm:inline text-zinc-700">Dark Mode</span>
+                <Moon className="h-4 w-4 text-amber-600" />
+                <span className="hidden sm:inline text-zinc-900">Dark Mode</span>
               </>
             )}
           </button>
         </div>
 
         {/* Title & Bio */}
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-100 dark:text-zinc-100 light:text-slate-900 sm:text-5xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-100 sm:text-5xl">
           {personalData.name}
         </h1>
-        <h2 className="mt-3 text-lg font-semibold tracking-tight text-amber-500 dark:text-amber-400 light:text-amber-600 sm:text-xl">
+        <h2 className="mt-3 text-lg font-semibold tracking-tight text-amber-400 sm:text-xl">
           {personalData.title}
         </h2>
-        <p className="mt-4 max-w-xs leading-relaxed text-zinc-400 dark:text-zinc-400 light:text-slate-600 text-sm">
+        <p className="mt-4 max-w-xs leading-relaxed text-zinc-400 text-sm">
           {personalData.tagline}
         </p>
 

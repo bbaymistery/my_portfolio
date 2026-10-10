@@ -16,31 +16,100 @@
   --accent-gold: #f59e0b;
   --accent-gold-hover: #fbbf24;
   --accent-glow: rgba(245, 158, 11, 0.15);
-  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(245, 158, 11, 0.035), transparent 15%);
+  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(245, 158, 11, 0.035), transparent 20%);
   --chip-bg: rgba(39, 39, 42, 0.7);
   --chip-text: #fef08a;
   --chip-border: rgba(245, 158, 11, 0.2);
 }
 
 html.light {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(241, 245, 249, 0.9);
-  --border-color: rgba(226, 232, 240, 0.9);
-  --border-highlight: rgba(217, 119, 6, 0.4);
+  /* Warm Book Parchment / Soft Reading Canvas Tone (No Blinding Glare) */
+  --bg-primary: #f5f2eb;
+  --bg-secondary: #e9e4d8;
+  --bg-card: rgba(253, 252, 247, 0.95);
+  --bg-card-hover: #ffffff;
+  --border-color: rgba(212, 201, 182, 0.85);
+  --border-highlight: rgba(180, 83, 9, 0.45);
 
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-dim: #64748b;
+  --text-main: #1c1917;    /* Deep charcoal - crisp readability */
+  --text-muted: #44403c;   /* Rich dark stone */
+  --text-dim: #78716c;     /* Muted stone */
 
-  --accent-gold: #d97706;
-  --accent-gold-hover: #b45309;
-  --accent-glow: rgba(217, 119, 6, 0.12);
-  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(217, 119, 6, 0.03), transparent 75%);
+  --accent-gold: #b45309;  /* Rich amber bronze */
+  --accent-gold-hover: #92400e;
+  --accent-glow: rgba(180, 83, 9, 0.12);
+  --spotlight-bg: radial-gradient(450px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(180, 83, 9, 0.04), transparent 75%);
   --chip-bg: #fef3c7;
-  --chip-text: #92400e;
-  --chip-border: rgba(217, 119, 6, 0.3);
+  --chip-text: #78350f;
+  --chip-border: rgba(217, 119, 6, 0.4);
+}
+
+/* Comprehensive Light Theme Class Overrides */
+html.light {
+  color-scheme: light;
+
+  /* Typography / Text contrast in light mode */
+  .text-zinc-100,
+  .text-zinc-200 {
+    color: #1c1917 !important;
+  }
+
+  .text-zinc-300 {
+    color: #27272a !important;
+  }
+
+  .text-zinc-400 {
+    color: #44403c !important;
+  }
+
+  .text-zinc-500 {
+    color: #64748b !important;
+  }
+
+  .text-zinc-600 {
+    color: #71717a !important;
+  }
+
+  /* Sticky section headers in light mode */
+  .bg-zinc-950\/75,
+  .bg-zinc-950 {
+    background-color: rgba(245, 242, 235, 0.92) !important;
+  }
+
+  /* Cards, Badges, and Container Backgrounds */
+  .bg-zinc-900\/60,
+  .bg-zinc-900\/80,
+  .bg-zinc-900 {
+    background-color: #eae4d6 !important;
+  }
+
+  .bg-zinc-800\/40,
+  .bg-zinc-800\/60,
+  .bg-zinc-800 {
+    background-color: #e2dbc9 !important;
+  }
+
+  /* Borders in light mode */
+  .border-zinc-800,
+  .border-zinc-800\/60,
+  .border-zinc-800\/80,
+  .border-zinc-800\/90,
+  .border-zinc-700\/50,
+  .border-zinc-700\/60 {
+    border-color: rgba(204, 191, 170, 0.85) !important;
+  }
+
+  /* Nav indicator lines */
+  .nav-indicator {
+    background-color: #78716c;
+  }
+
+  /* Floating Mobile Nav bar */
+  nav.fixed div {
+    background-color: rgba(245, 242, 235, 0.95) !important;
+    border-color: rgba(204, 191, 170, 0.9) !important;
+    box-shadow: 0 10px 25px -5px rgba(120, 100, 70, 0.15) !important;
+  }
 }
 
 body {
