@@ -5,7 +5,7 @@ import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 const AzerbaijanFlag = ({ className = "h-6 w-9" }) => (
   <svg
     viewBox="0 0 1200 600"
-    className={`${className} overflow-hidden rounded-[3px] shadow-md ring-1 ring-white/20`}
+    className={`${className} overflow-hidden rounded-[3px]`}
     xmlns="http://www.w3.org/2000/svg"
     aria-label="Azerbaijan Flag"
   >
@@ -24,7 +24,7 @@ const AzerbaijanFlag = ({ className = "h-6 w-9" }) => (
 const UKFlag = ({ className = "h-6 w-9" }) => (
   <svg
     viewBox="0 0 60 30"
-    className={`${className} overflow-hidden rounded-[3px] shadow-md ring-1 ring-white/20`}
+    className={`${className} overflow-hidden rounded-[3px]`}
     xmlns="http://www.w3.org/2000/svg"
     aria-label="United Kingdom Flag"
   >
