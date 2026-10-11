@@ -1,6 +1,73 @@
 import React, { useState } from 'react';
 import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
+// Azerbaijan Flag SVG Component
+const AzerbaijanFlag = ({ className = "h-6 w-9" }) => (
+  <svg
+    viewBox="0 0 1200 600"
+    className={`${className} overflow-hidden rounded-[3px] shadow-md ring-1 ring-white/20`}
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="Azerbaijan Flag"
+  >
+    <rect width="1200" height="200" fill="#0092bc" />
+    <rect y="200" width="1200" height="200" fill="#e4002b" />
+    <rect y="400" width="1200" height="200" fill="#00af66" />
+    <circle cx="560" cy="300" r="95" fill="#ffffff" />
+    <circle cx="590" cy="300" r="76" fill="#e4002b" />
+    <g transform="translate(680, 300) scale(42)" fill="#ffffff">
+      <polygon points="0,-1 0.28,-0.38 0.71,-0.71 0.38,-0.28 1,0 0.38,0.28 0.71,0.71 0.28,0.38 0,1 -0.28,0.38 -0.71,0.71 -0.38,0.28 -1,0 -0.38,-0.28 -0.71,-0.71 -0.28,-0.28" />
+    </g>
+  </svg>
+);
+
+// United Kingdom Flag SVG Component
+const UKFlag = ({ className = "h-6 w-9" }) => (
+  <svg
+    viewBox="0 0 60 30"
+    className={`${className} overflow-hidden rounded-[3px] shadow-md ring-1 ring-white/20`}
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="United Kingdom Flag"
+  >
+    <clipPath id="uk-flag-clip">
+      <rect width="60" height="30" />
+    </clipPath>
+    <g clipPath="url(#uk-flag-clip)">
+      <path d="M0 0h60v30H0z" fill="#012169" />
+      <path d="M0 0l60 30m0-30L0 30" stroke="#ffffff" strokeWidth="6" />
+      <path d="M0 0l60 30m0-30L0 30" stroke="#c8102e" strokeWidth="2" />
+      <path d="M30 0v30M0 15h60" stroke="#ffffff" strokeWidth="10" />
+      <path d="M30 0v30M0 15h60" stroke="#c8102e" strokeWidth="6" />
+    </g>
+  </svg>
+);
+
+const renderFlagBadge = (location) => {
+  if (!location) return null;
+  const loc = location.toLowerCase();
+
+  let flag = null;
+  let title = "";
+
+  if (loc.includes('baku') || loc.includes('azerbaijan')) {
+    flag = <AzerbaijanFlag className="h-6 w-9 sm:h-7 sm:w-10.5 shrink-0" />;
+    title = "Baku, Azerbaijan";
+  } else if (loc.includes('london') || loc.includes('uk') || loc.includes('united kingdom')) {
+    flag = <UKFlag className="h-6 w-9 sm:h-7 sm:w-10.5 shrink-0" />;
+    title = "London, United Kingdom";
+  }
+
+  if (!flag) return null;
+
+  return (
+    <div
+      className="flex items-center gap-2 p-1 rounded-md bg-zinc-900/80 border border-zinc-800 shadow-sm transition-all hover:border-amber-500/40 hover:scale-105 cursor-default"
+      title={title}
+    >
+      {flag}
+    </div>
+  );
+};
+
 export default function ExperienceSection({ experiences }) {
   const [showAll, setShowAll] = useState(false);
   const [expandedMap, setExpandedMap] = useState({});
@@ -78,7 +145,7 @@ export default function ExperienceSection({ experiences }) {
                       </p>
                     )}
 
-                    {/* Accordion Toggle Trigger Button */}
+                    {/* Accordion Toggle Trigger Button & Location Flag */}
                     <div className="mt-4 flex items-center justify-between">
                       <button
                         onClick={() => toggleExpand(index)}
@@ -88,6 +155,9 @@ export default function ExperienceSection({ experiences }) {
                         <span>{isExpanded ? "Hide Details" : "View Achievements & Tech"}</span>
                         {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                       </button>
+
+                      {/* Location Flag (Bottom Right) */}
+                      {renderFlagBadge(exp.location)}
                     </div>
                   </div>
                 </div>

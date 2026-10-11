@@ -15,7 +15,7 @@ export const portfolioData = {
     stats: [
       { label: "Years of experience", value: "5+" },
       { label: "Projects Completed", value: "10+" },
-      { label: "Core Stacks", value: "React, Next.js, TypeScript" }
+      { label: "Core Stacks", value: "React, Next.js, TypeScript, Nest" }
     ],
     social: {
       github: "https://github.com/bbaymistery",
@@ -53,7 +53,8 @@ export const portfolioData = {
         "Agile / Scrum",
         "HTML5 / CSS3",
 
-
+        "Jest",
+        "Integration Testing",
         "RESTful APIs",
         "GraphQL",
         "Accessibility (WCAG)",
@@ -61,43 +62,60 @@ export const portfolioData = {
         "Context API",
         "Sass / SCSS",
 
-        "Performance Optimization",
+        "Figma",
+        "Backlog Refinement",
 
         "Cross-functional Collaboration",
-        "Backlog Refinement",
-        "Figma",
+        "Performance Optimization",
 
       ]
     },
     {
-      period: "04/2022 — 05/2026",
+      period: "04/2022 — 07/2026",
       role: "Next.js Developer ",
       company: "Airport Pickups London",
       location: "London (Remote)",
       companyUrl: "https://aplcars.com",
       description: "Since 2007, Airport Pickups London (APL) has been providing executive transfer service from all London airports.",
       bullets: [
-        "Architected a production-grade Next.js and TypeScript booking engine integrated with secure Stripe/PayPal checkouts, orchestrating Redux state pipelines to process dynamic pricing and route-distance logic.",
-        "Engineered a fully localized, multi-language web architecture across the entire platform, including an intuitive 'Manage Booking' dashboard for self-service reservation modifications.",
-        "Spearheaded an AI-powered corporate subdomain integrating OpenAI (GPT-4) for automated SEO text generation while engineering a dedicated B2B agency platform with secure authentication.",
-        "Implemented Server-Side Rendering (SSR) and HTTP caching policies to boost SEO visibility and significantly reduce initial page load times across key pages by up to 20%.",
-        "Translated Figma designs into responsive, pixel-perfect UI components across mobile and desktop platforms using lightweight custom Vanilla JavaScript components.",
-        "Streamlined CI/CD and staging workflows using Netlify and GitHub, while optimizing Core Web Vitals (LCP, CLS) and increasing Lighthouse performance scores to 90+."
+        "Architected a production-grade Next.js booking engine integrated with secure online payment gateways (Stripe, PayPal, Amex) and flexible workflows, leveraging advanced rendering strategies (SSR, SSG, ISR, and React Server Components) alongside partial hydration for optimal performance.",
+        "Bridged frontend and backend architectures by integrating robust RESTful APIs, implementing efficient data polling mechanisms for live UI table updates, and actively contributing to backend endpoint development using Node.js",
+
+        "Spearheaded Technical and GEO SEO initiatives by engineering a fully localized, multi-language web architecture, rigorously optimizing Core Web Vitals to consistently achieve 90+ Lighthouse performance scores and maximize global organic visibility.",
+        "Led end-to-end UI/UX execution for both the core booking platform and a dedicated B2B agency portal (implementing secure authentication interfaces). Independently conceptualized intuitive designs and developed them into highly polished, mobile-responsive interfaces using modern SCSS architectures.",
+        "Pioneered AI-native booking experiences by implementing the Model Context Protocol (MCP) to develop an intelligent conversational agent for instant transfer quotes and real-time support. Configured robust system architectures (including .well-known integrations) to seamlessly interface with major LLMs (Claude, ChatGPT, Gemini) while accelerating development cycles with AI-assisted tools like Cursor.",
       ],
       technologies: [
+        // Çekirdek Frontend (Zaten vardı, kalıyor)
         "JavaScript",
         "TypeScript",
         "React",
         "Next.js",
-        "Redux",
+
+        // State Yönetimi & Veri Çekme (Eskiler ve Eklenenler)
+        "Redux Toolkit", // Sadece Redux yerine Toolkit yazmak daha moderndir
         "Context API",
-        "Accessibility (WCAG)",
-        "SSR / SEO",
-        "OpenAI (GPT-4)",
         "RESTful APIs",
-        "Netlify",
+        "WebSockets/Socket.io", // Yeni eklendi (Real-time data senkronizasyonu için)
+
+        // Mimari, Performans ve SEO (Yeni metni destekleyenler)
+        "SSR / SSG / ISR / RSC", // Sadece SSR yerine bunu yazmak Next.js uzmanlığını kanıtlar
+        "Node.js",               // Yeni eklendi
         "CI/CD",
-        "Figma"
+
+        "Technical SEO / GEO",   // Yeni eklendi
+        "Core Web Vitals",       // Yeni eklendi (Lighthouse 90+ skorunu destekler)
+        // UI / UX & Ops (Tasarım ve süreçler)
+        "Figma",
+        // Backend & AI (Sistemin gücünü gösterenler)
+        "MCP (Model Context Protocol)", // Sadece OpenAI yerine bu çok daha teknik ve havalı
+        "LLM Integration",       // Yeni eklendi (Claude, Gemini, ChatGPT genel adı)
+        "Antigravity",                // Yeni eklendi (AI destekli tool kullanımı)
+
+
+        "Sass / SCSS",           // Yeni eklendi (Tasarımı koda dökerken kullandığın yapı)
+        "Debugging and Troubleshooting",
+        "Accessibility (WCAG 2.1)",
       ]
     },
 
