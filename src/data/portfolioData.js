@@ -29,32 +29,44 @@ export const portfolioData = {
   experiences: [
     {
       period: "04/2021 — 11/2021",
-      role: "React Developer",
+      role: "Junior React Developer",
       company: "Deirvlon Technologies",
       location: "Baku",
       companyUrl: "https://deirvlon.com/",
       description: "Deirvlon Technologies delivers custom software solutions, saving business time and money by ensuring a perfect fit for enterprise needs.",
       bullets: [
-        "Engineered a scalable React and TypeScript e-commerce application, leveraging Redux for global state management to minimize runtime errors by 30%.",
-        "Designed fully responsive, mobile-first interfaces using modern SCSS and Tailwind CSS methodologies, driving a 25% increase in user engagement.",
-        "Refactored front-end architecture to accelerate website speed, achieving a 90+ Lighthouse score and cutting page rendering times by 1.5 seconds to lower bounce rates.",
-        "Integrated front-end components with RESTful APIs and GraphQL endpoints, enabling dynamic real-time data fetching and a secure checkout pipeline."
+        "Engineered a scalable e-commerce application utilizing React, TypeScript, and Redux, translating complex Figma designs into pixel-perfect interfaces and establishing a robust frontend architecture."
+        ,
+        "Spearheaded frontend performance optimizations with a strict focus on Core Web Vitals, significantly improving page load speeds, rendering efficiency, and overall user experience without compromising visual quality.",
+        "Enforced high code quality standards by integrating comprehensive testing strategies (Jest, React Testing Library) and maintaining structured version control (Git) workflows across the development lifecycle.",
+        "Integrated dynamic frontend components with RESTful APIs and GraphQL endpoints, enabling real-time data fetching and ensuring a highly secure checkout pipeline.",
+        "Actively engaged in Agile/Scrum processes, contributing to requirements and backlog refinement, while providing peer mentorship and conducting code reviews to elevate team engineering standards."
+        ,
+        "Engineered a scalable e-commerce application utilizing React, TypeScript, and Redux, translating complex Figma designs into pixel-perfect interfaces and establishing a robust frontend architecture."
+
       ],
       technologies: [
+        "React",
         "JavaScript",
         "TypeScript",
-        "React",
         "Redux",
-        "Context API",
-        "Accessibility (WCAG)",
-        "Sass / SCSS",
+        "Agile / Scrum",
+        "HTML5 / CSS3",
+
+
         "RESTful APIs",
         "GraphQL",
+        "Accessibility (WCAG)",
+
+        "Context API",
+        "Sass / SCSS",
+
         "Performance Optimization",
+
+        "Cross-functional Collaboration",
+        "Backlog Refinement",
         "Figma",
-        "HTML5 / CSS3",
-        "Agile / Scrum",
-        "Cross-functional Collaboration"
+
       ]
     },
     {
@@ -177,8 +189,7 @@ export const portfolioData = {
     {
       category: "CI/CD, Infrastructure & Cloud",
       skills: [
-        "GitHub Actions",
-        "GitLab CI",
+        "CI/CD",
         "Version Control Systems (Git / GitHub)",
         "Docker",
         "AWS",
@@ -211,7 +222,7 @@ export const portfolioData = {
       category: "Agile, Mentorship & Collaboration",
       skills: [
         "Agile / Scrum",
-        "Requirements & Backlog Refinement",
+        "Backlog Refinement",
         "Mentorship / Code Review",
         "Cross-functional Collaboration",
       ]
