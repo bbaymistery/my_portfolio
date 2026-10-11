@@ -4,7 +4,7 @@ export const portfolioData = {
     title: "Frontend Engineer",
     subtitle: "Sakarya University Alumnus",
     tagline: "5+ years of building scalable UIs, currently expanding into cloud-driven full-stack architectures.",
-    avatar: "/avatar.jpg",
+    avatar: "/avatarr.jpeg",
     location: "Azerbaijan",
     aboutParagraphs: [
       "I am a frontend engineer with 5 years of professional experience building modern, scalable web applications using React, Next.js, and TypeScript.",

@@ -40,9 +40,9 @@ export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme,
             <img
               src={personalData.avatar}
               alt={personalData.name}
-              className="h-24 w-24 rounded-full object-cover ring-2 ring-amber-500/30 group-hover:ring-amber-500 transition-all duration-300 shadow-lg"
+              className="h-32 w-32 sm:h-36 sm:w-36 rounded-full object-cover ring-2 ring-amber-500/30 group-hover:ring-amber-500 transition-all duration-300 shadow-xl"
             />
-            <span className="absolute bottom-0 right-0 h-4 w-4 rounded-full bg-emerald-500 ring-2 ring-zinc-900" title="Available for opportunities"></span>
+            <span className="absolute bottom-1.5 right-1.5 h-4.5 w-4.5 rounded-full bg-emerald-500 ring-2 ring-zinc-900" title="Available for opportunities"></span>
           </div>
 
           <button
