@@ -5,7 +5,7 @@ export default function AboutSection({ personalData }) {
     <section
       id="about"
       aria-label="About me"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
+      className="mb-[55px] scroll-mt-16 lg:scroll-mt-24"
     >
       {/* Sticky Header for Mobile */}
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-zinc-950/75 px-6 py-4 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -21,17 +21,16 @@ export default function AboutSection({ personalData }) {
       </div>
 
       {/* Highlights / Key Stats Grid */}
-      <dl className="mt-10 grid grid-cols-3 gap-2 sm:gap-6 border-t border-zinc-800/80 pt-8">
+      <dl className="mt-10 grid grid-cols-3 gap-2 sm:gap-6 border-t border-zinc-800/80 pt-[32px]">
         {personalData.stats.map((stat, index) => (
           <div key={index} className="glass-card glass-card-interactive p-3 sm:p-4 text-center sm:text-left">
             <dt className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-500">
               {stat.label}
             </dt>
-            <dd className={`mt-1.5 sm:mt-2 font-mono font-extrabold text-amber-400 ${
-              stat.value.length > 8
+            <dd className={`mt-1.5 sm:mt-2 font-mono font-extrabold text-amber-400 ${stat.value.length > 8
                 ? 'text-xs sm:text-sm md:text-base leading-tight font-sans'
                 : 'text-2xl sm:text-4xl'
-            }`}>
+              }`}>
               {stat.value}
             </dd>
           </div>
