@@ -41,16 +41,20 @@ export const portfolioData = {
         "Integrated front-end components with RESTful APIs and GraphQL endpoints, enabling dynamic real-time data fetching and a secure checkout pipeline."
       ],
       technologies: [
-        "React",
+        "JavaScript",
         "TypeScript",
+        "React",
         "Redux",
         "Context API",
         "Accessibility (WCAG)",
-        "SCSS",
-        "Tailwind CSS",
+        "Sass / SCSS",
         "RESTful APIs",
         "GraphQL",
-        "Performance Optimization"
+        "Performance Optimization",
+        "Figma",
+        "HTML5 / CSS3",
+        "Agile / Scrum",
+        "Cross-functional Collaboration"
       ]
     },
     {
@@ -69,16 +73,16 @@ export const portfolioData = {
         "Streamlined CI/CD and staging workflows using Netlify and GitHub, while optimizing Core Web Vitals (LCP, CLS) and increasing Lighthouse performance scores to 90+."
       ],
       technologies: [
+        "JavaScript",
+        "TypeScript",
         "React",
         "Next.js",
-        "TypeScript",
         "Redux",
         "Context API",
         "Accessibility (WCAG)",
         "SSR / SEO",
         "OpenAI (GPT-4)",
         "RESTful APIs",
-        "Vanilla JavaScript",
         "Netlify",
         "CI/CD",
         "Figma"
@@ -91,10 +95,11 @@ export const portfolioData = {
     {
       category: "Frontend & UI Engineering",
       skills: [
+        "JavaScript",
+        "TypeScript",
         "React",
         "Next.js",
         "React Native",
-        "TypeScript",
         "Micro Frontends (MFE)",
         "Module Federation",
         "HTML5 / CSS3",
@@ -206,11 +211,9 @@ export const portfolioData = {
       category: "Agile, Mentorship & Collaboration",
       skills: [
         "Agile / Scrum",
+        "Requirements & Backlog Refinement",
         "Mentorship / Code Review",
-        "Task Refinement",
-        "Backlog Prioritization",
         "Cross-functional Collaboration",
-        "Interpersonal Communication"
       ]
     }
   ],

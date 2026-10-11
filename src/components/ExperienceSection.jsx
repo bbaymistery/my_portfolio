@@ -34,13 +34,13 @@ export default function ExperienceSection({ experiences }) {
             <li key={index}>
               <div className="group relative glass-card p-5 sm:p-6 transition-all border border-zinc-800 hover:border-amber-500/40">
                 {/* Header Row / Summary Info */}
-                <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-3 ">
                   {/* Date & Location Column */}
                   <header
                     className="z-10 shrink-0 sm:w-36 font-mono"
                     aria-label={exp.period}
                   >
-                    <div className="text-xs sm:text-sm font-bold tracking-wide text-zinc-200">
+                    <div className="text-xs font-bold tracking-wide text-zinc-200">
                       {exp.period}
                     </div>
                     {exp.location && (
