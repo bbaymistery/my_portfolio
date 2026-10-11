@@ -32,7 +32,7 @@ export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme,
   ];
 
   return (
-    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-5/12 lg:flex-col lg:justify-between lg:py-24">
+    <aside className="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-5/12 lg:flex-col lg:justify-between lg:py-16 xl:py-20">
       <div>
         {/* Top Header Row with Theme Toggle */}
         <div className="flex items-center justify-between mb-6">
@@ -77,7 +77,7 @@ export default function Sidebar({ activeSection, onNavClick, theme, toggleTheme,
         </p>
 
         {/* In-page jump navigation */}
-        <nav className="nav mt-16 hidden lg:block" aria-label="In-page jump links">
+        <nav className="nav mt-10 xl:mt-12 hidden lg:block" aria-label="In-page jump links">
           <ul className="w-max space-y-1">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
