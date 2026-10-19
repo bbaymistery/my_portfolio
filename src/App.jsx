@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import MobileNav from './components/MobileNav';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
+import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
 import EducationSection from './components/EducationSection';
 import ContactSection from './components/ContactSection';
@@ -44,7 +45,7 @@ export default function App() {
     const handleScroll = () => {
       if (isManualClickRef.current) return;
 
-      const sections = ['about', 'experience', 'skills', 'education', 'contact'];
+      const sections = ['about', 'experience', 'projects', 'skills', 'education', 'contact'];
 
       // Check if user is near bottom of page
       const scrollPosition = window.innerHeight + window.scrollY;
@@ -116,6 +117,8 @@ export default function App() {
             <AboutSection personalData={portfolioData.personal} />
             
             <ExperienceSection experiences={portfolioData.experiences} />
+
+            <ProjectsSection projects={portfolioData.projects} />
 
             <SkillsSection skillsCategorized={portfolioData.skillsCategorized} />
 

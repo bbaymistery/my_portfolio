@@ -22,7 +22,9 @@ export const portfolioData = {
       linkedin: "https://www.linkedin.com/in/elgun-ezmemmedov-1628a51b4/",
       email: "elgun.ezmemmedov@gmail.com",
       whatsapp: "https://wa.me/994506330135",
-      whatsappDisplay: "+994 50 633 01 35"
+      whatsappDisplay: "+994 50 633 01 35",
+      telegram: "https://t.me/baymistery",
+      telegramDisplay: "@baymistery"
     }
   },
 
@@ -119,7 +121,82 @@ export const portfolioData = {
       ]
     },
 
+  ],
 
+  projects: [
+    {
+      title: "Flipkart Clone — Full-Stack E-Commerce Enterprise Platform",
+      stackType: "MERN Stack",
+      subtitle: "Enterprise E-Commerce Ecosystem",
+      githubUrl: "https://github.com/bbaymistery/mernprojects_/tree/main/2_flipcard",
+      description: "A production-grade, full-stack e-commerce enterprise ecosystem built with Node.js, Express, MongoDB, React 18, and Redux Toolkit. Features multi-tier recursive category tree management, multi-image product uploading, custom admin page layout builders, atomic shopping cart synchronization, 4-step guided checkout, and real-time order tracking.",
+      highlights: [
+        "Recursive Category Hierarchy: Dynamic parent-child tree generator supporting unlimited nesting depth and dynamic top navigation.",
+        "Admin Control Dashboard: Single-request initial data hydration, interactive category tree with modal batch updates, and visual order pipeline manager.",
+        "Customer Storefront App: Price-segmented product grouping, guest cart auto-merging with MongoDB upon login, and 4-step guided checkout.",
+        "Robust File Pipeline: Multer storage engine handling product images, category icons, and promotional banners with disk and cloud storage options."
+      ],
+      technologies: [
+        "React 18",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Redux Toolkit",
+        "JWT",
+        "Multer",
+        "RESTful APIs"
+      ]
+    },
+    {
+      title: "V-Network — Full-Featured Social Media Platform",
+      stackType: "MERN Stack",
+      subtitle: "Real-Time Social Networking & WebRTC Calling",
+      githubUrl: "https://github.com/bbaymistery/mernprojects_/tree/main/1_social_media",
+      description: "A production-ready, full-stack MERN social networking application inspired by Instagram, featuring real-time messaging, WebRTC peer-to-peer video/audio calling, instant notifications, interactive social feeds with Cloudinary multi-image uploads, and dark mode support.",
+      highlights: [
+        "Real-Time Messaging & Calling: Low-latency 1-on-1 direct chat with Socket.io and high-definition P2P audio/video calling via PeerJS (WebRTC).",
+        "Authentication & Security: Dual-token system with JWT access tokens and secure HTTP-only Refresh Token cookies, backed by bcrypt encryption.",
+        "Interactive Social Feeds: Dynamic home feed, nested comment replies, instant like/unlike, bookmarking, and trending discover feed.",
+        "Cloudinary Media Pipeline: Multi-image media uploads with secure URL and public_id persistence across user posts and profiles."
+      ],
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "WebRTC (PeerJS)",
+        "Redux Thunk",
+        "Cloudinary",
+        "JWT",
+        "Bootstrap 5"
+      ]
+    },
+    {
+      title: "NestJS E-Commerce Backend REST API",
+      stackType: "NestJS & PostgreSQL",
+      subtitle: "High-Performance Cloud Database RESTful Architecture",
+      githubUrl: "https://github.com/bbaymistery/nest_Ecommerce/tree/main",
+      description: "An enterprise-grade, high-performance e-commerce backend application developed with NestJS, TypeORM, and PostgreSQL (Neon Cloud Database). Implements Role-Based Access Control (RBAC), complex SQL query aggregations, circular dependency resolution, and automated inventory reconciliation.",
+      highlights: [
+        "Complex QueryBuilder Operations: Dynamic product filtering, pagination, and SQL aggregations for review counts and average ratings.",
+        "Automated Inventory Reconciliation: Automated stock updates when order states change to delivered or cancelled.",
+        "Modular Security & RBAC: Custom JWT AuthenticationGuard, AuthorizeGuard (ADMIN / USER), and @CurrentUser decorator.",
+        "Response Serialization Interceptors: RxJS pipe and map serialization interceptors stripping extraneous database columns for clean payloads."
+      ],
+      technologies: [
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL (Neon DB)",
+        "TypeORM",
+        "JWT",
+        "Bcrypt",
+        "RxJS",
+        "Class Validator",
+        "RESTful APIs"
+      ]
+    }
   ],
 
   skillsCategorized: [
@@ -261,7 +338,7 @@ export const portfolioData = {
     },
     {
       degree: "High School Diploma",
-      institution: "Agdash & Mingachevir Private Turkish High School",
+      institution: "Turkish High School",
       period: "2013",
       details: "High School Graduation"
     }

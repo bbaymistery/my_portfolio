@@ -202,6 +202,10 @@ html.light {
   .icon-whatsapp {
     color: #128c7e !important;
   }
+
+  .icon-telegram {
+    color: #0088cc !important;
+  }
 }
 
 .social-icon-box {
@@ -249,6 +253,15 @@ html.light {
   color: #10b981 !important;
 }
 
+.social-telegram:hover {
+  background-color: rgba(14, 165, 233, 0.15) !important;
+  border-color: rgba(14, 165, 233, 0.6) !important;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25) !important;
+}
+.social-telegram:hover .icon-telegram {
+  color: #38bdf8 !important;
+}
+
 /* Default Dark Mode Icon Colors */
 .icon-github {
   color: #c084fc;
@@ -264,6 +277,10 @@ html.light {
 
 .icon-whatsapp {
   color: #34d399;
+}
+
+.icon-telegram {
+  color: #38bdf8;
 }
 
 body {

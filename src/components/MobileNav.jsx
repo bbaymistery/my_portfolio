@@ -1,10 +1,11 @@
 import React from 'react';
-import { User, Briefcase, Wrench, GraduationCap, Mail } from 'lucide-react';
+import { User, Briefcase, FolderGit2, Wrench, GraduationCap, Mail } from 'lucide-react';
 
 export default function MobileNav({ activeSection, onNavClick }) {
   const navItems = [
     { id: 'about', label: 'About', icon: <User className="h-4 w-4" /> },
     { id: 'experience', label: 'Experience', icon: <Briefcase className="h-4 w-4" /> },
+    { id: 'projects', label: 'Projects', icon: <FolderGit2 className="h-4 w-4" /> },
     { id: 'skills', label: 'Skills', icon: <Wrench className="h-4 w-4" /> },
     { id: 'education', label: 'Education', icon: <GraduationCap className="h-4 w-4" /> },
     { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> }
