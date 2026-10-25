@@ -7,7 +7,7 @@ const GithubIcon = ({ className = "h-4 w-4" }) => (
     <path d="M9 18c-4.51 2-5-2-7-2"></path>
   </svg>
 );
-
+const showProjects = false
 export default function ProjectsSection({ projects }) {
   const [expandedMap, setExpandedMap] = useState({});
 
@@ -32,7 +32,7 @@ export default function ProjectsSection({ projects }) {
       </div>
 
       <div className="space-y-6">
-        {projects.map((project, index) => {
+        {showProjects && projects.map((project, index) => {
           const isExpanded = !!expandedMap[index];
 
           return (
