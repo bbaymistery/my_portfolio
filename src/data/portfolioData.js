@@ -3,14 +3,15 @@ export const portfolioData = {
     name: "Elgun Ezmemmedov",
     title: "Frontend Engineer",
     subtitle: "Sakarya University Alumnus",
-    tagline: "5+ years of building scalable UIs, currently expanding into cloud-driven full-stack architectures.",
+    tagline: "5+ years building booking and payment systems with React and Next.js. Now growing into full-stack with Node.js and NestJS.",
     avatar: "/avatarr.jpeg",
     location: "Azerbaijan",
     aboutParagraphs: [
-      "I am a frontend engineer with 5 years of professional experience building modern, scalable web applications using React, Next.js, and TypeScript.",
-      "I focus on writing clean, maintainable code, developing reliable user interfaces, and creating performant web experiences aligned with business goals. My experience includes building and maintaining production web applications, particularly booking and reservation systems and e-commerce platforms.",
-      "I am currently expanding my expertise into backend engineering with Node.js, NestJS, PostgreSQL, and modern cloud technologies, with the goal of building a stronger full-stack engineering skill set.",
-      "I value continuous learning, ownership, and thoughtful problem-solving. I am open to new challenges across diverse industries and enjoy building impactful digital products where technical quality and user experience go hand in hand."
+      "I'm a frontend engineer with 5+ years of experience building production web apps with React, Next.js and TypeScript.",
+      "For over four years, I worked remotely for Airport Pickups London (aplcars.com), an international airport-transfer platform, where I grew from Junior Next.js Developer to Frontend Engineer. I owned the booking and payment flows, from quote search to checkout with Stripe, PayPal and American Express.",
+      "Some things I'm proud of: a Manage Booking widget that now runs on 7 company websites, live flight tracking that keeps drivers and passengers in sync during delays, raising Lighthouse scores from 77 to 90+, and MCP integrations that let Claude, ChatGPT and Gemini fetch real transfer quotes.",
+      "I care about the people using what I build. A one-hour time zone bug in pickup times taught me that small mistakes have real costs, so I test real-world cases, not just the happy path.",
+      "I'm now growing my full-stack skills with Node.js, NestJS and PostgreSQL. I'm based in Baku (UTC+4), open to remote roles and flexible with time zones."
     ],
     stats: [
       { label: "Years of experience", value: "5+" },
@@ -30,51 +31,77 @@ export const portfolioData = {
 
   experiences: [
     {
-      period: "04/2022 — 07/2026",
-      role: "Senior Next.js Engineer",
+      period: "04/2024 — 09/2026",
+      role: "Frontend Engineer",
+      company: "Airport Pickups London",
+      location: "London (Remote)",
+      companyUrl: "https://aplcars.com",
+      description: "Promoted from Junior Next.js Developer. Owned the booking and payment flows of an international airport-transfer platform (aplcars.com), from quote search to checkout.",
+      bullets: [
+        "Owned the end-to-end 5-step booking funnel in Next.js and TypeScript: quote search, vehicle results, transfer details, payment and confirmation, with backend-driven redirects and booking state preserved across every step.",
+        "Expanded checkout to 3 payment providers by adding PayPal and American Express to Stripe, and fixed critical production checkout issues, including a PayPal pop-up failure on newer iOS versions and undelivered booking-confirmation emails.",
+        "Built a self-service Manage Booking widget used across 7 company websites: customers view, edit, pay for and cancel bookings themselves, with live re-quoting, Stripe surcharge payments and 24-hour amendment rules.",
+        "Implemented live flight tracking that recalculates pickup times from actual and estimated landing data in the arrival airport's timezone, keeping drivers and passengers in sync during delays.",
+        "Led front-end delivery of a secure B2B agency portal with authentication and data-heavy tables that update in near real time.",
+        "Raised Lighthouse scores from 77 to 90+ on a 7-language site (translations loaded dynamically from the backend API) using SSR/SSG/ISR, React Server Components, code splitting and Redux Toolkit/Zustand; implemented technical SEO (JSON-LD structured data, canonical URLs, semantic HTML) and GEO for AI-driven search.",
+        "Built MCP integrations connecting 3 LLMs (Claude, ChatGPT, Gemini) to booking workflows, powering a conversational assistant for real-time customer support.",
+        "Turned Figma designs into pixel-perfect, reusable components (Tailwind CSS, SCSS); wrote Jest, Playwright and Cypress tests, reviewed teammates' code and shipped via CI/CD to Vercel and Netlify."
+      ],
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "SSR / SSG / ISR / RSC",
+        "Redux Toolkit",
+        "Zustand",
+        "Stripe",
+        "PayPal",
+        "American Express",
+        "REST APIs",
+        "Technical SEO / GEO",
+        "Core Web Vitals",
+        "MCP (Model Context Protocol)",
+        "LLM Integration",
+        "Tailwind CSS",
+        "Sass / SCSS",
+        "Figma",
+        "Jest",
+        "Playwright",
+        "Cypress",
+        "CI/CD",
+        "Vercel",
+        "Netlify"
+      ]
+    },
+    {
+      period: "04/2022 — 03/2024",
+      role: "Junior Next.js Developer",
       company: "Airport Pickups London",
       location: "London (Remote)",
       companyUrl: "https://aplcars.com",
       description: "Since 2007, Airport Pickups London (APL) has been providing executive transfer service from all London airports.",
       bullets: [
-        "Architected a production-grade Next.js booking engine integrated with secure online payment gateways (Stripe, PayPal, Amex) and flexible workflows, leveraging advanced rendering strategies (SSR, SSG, ISR, and React Server Components) alongside partial hydration for optimal performance.",
-        "Bridged frontend and backend architectures by integrating robust RESTful APIs, implementing efficient data polling mechanisms for live UI table updates, and actively contributing to backend endpoint development using Node.js",
-
-        "Spearheaded Technical and GEO SEO initiatives by engineering a fully localized, multi-language web architecture, rigorously optimizing Core Web Vitals to consistently achieve 90+ Lighthouse performance scores and maximize global organic visibility.",
-        "Led end-to-end UI/UX execution for both the core booking platform and a dedicated B2B agency portal (implementing secure authentication interfaces). Independently conceptualized intuitive designs and developed them into highly polished, mobile-responsive interfaces using modern SCSS architectures.",
-        "Pioneered AI-native booking experiences by implementing the Model Context Protocol (MCP) to develop an intelligent conversational agent for instant transfer quotes and real-time support. Configured robust system architectures (including .well-known integrations) to seamlessly interface with major LLMs (Claude, ChatGPT, Gemini) while accelerating development cycles with AI-assisted tools like Cursor.",
+        "Independently designed and built the UI of one of the company's websites, from layout to responsive, mobile-first components (React, Next.js, SCSS).",
+        "Implemented Stripe payments in the booking checkout.",
+        "Built multi-step passenger-detail forms with client-side validation, reducing incomplete and incorrect booking data.",
+        "Audited an inherited codebase and refactored its Redux state structure, eliminating excessive re-renders and making the app noticeably faster.",
+        "Developed parts of the booking flow and integrated REST APIs from Node.js services.",
+        "Fixed cross-browser and iOS-specific issues such as scrolling and viewport bugs.",
+        "Wrote tests with Jest and took part in code reviews."
       ],
       technologies: [
-        // Çekirdek Frontend (Zaten vardı, kalıyor)
-        "JavaScript",
-        "TypeScript",
         "React",
         "Next.js",
-
-        // State Yönetimi & Veri Çekme (Eskiler ve Eklenenler)
-        "Redux Toolkit", // Sadece Redux yerine Toolkit yazmak daha moderndir
-        "Context API",
-        "RESTful APIs",
-        "WebSockets/Socket.io", // Yeni eklendi (Real-time data senkronizasyonu için)
-
-        // Mimari, Performans ve SEO (Yeni metni destekleyenler)
-        "SSR / SSG / ISR / RSC", // Sadece SSR yerine bunu yazmak Next.js uzmanlığını kanıtlar
-        "Node.js",               // Yeni eklendi
-        "CI/CD",
-
-        "Technical SEO / GEO",   // Yeni eklendi
-        "Core Web Vitals",       // Yeni eklendi (Lighthouse 90+ skorunu destekler)
-        // UI / UX & Ops (Tasarım ve süreçler)
-        "Figma",
-        // Backend & AI (Sistemin gücünü gösterenler)
-        "MCP (Model Context Protocol)", // Sadece OpenAI yerine bu çok daha teknik ve havalı
-        "LLM Integration",       // Yeni eklendi (Claude, Gemini, ChatGPT genel adı)
-        "Antigravity",                // Yeni eklendi (AI destekli tool kullanımı)
-
-
-        "Sass / SCSS",           // Yeni eklendi (Tasarımı koda dökerken kullandığın yapı)
-        "Debugging and Troubleshooting",
-        "Accessibility (WCAG 2.1)",
+        "JavaScript",
+        "Sass / SCSS",
+        "Redux",
+        "Stripe",
+        "REST APIs",
+        "Node.js",
+        "Form Validation",
+        "Responsive / Mobile-first",
+        "Jest",
+        "Code Review"
       ]
     },
     {
@@ -85,42 +112,26 @@ export const portfolioData = {
       companyUrl: "https://deirvlon.com/",
       description: "Deirvlon Technologies delivers custom software solutions, saving business time and money by ensuring a perfect fit for enterprise needs.",
       bullets: [
-        "Engineered a scalable e-commerce application utilizing React, TypeScript, and Redux, translating complex Figma designs into pixel-perfect interfaces and establishing a robust frontend architecture."
-        ,
-        "Spearheaded frontend performance optimizations with a strict focus on Core Web Vitals, significantly improving page load speeds, rendering efficiency, and overall user experience without compromising visual quality.",
-        "Enforced high code quality standards by integrating comprehensive testing strategies (Jest, React Testing Library) and maintaining structured version control (Git) workflows across the development lifecycle.",
-        "Integrated dynamic frontend components with RESTful APIs and GraphQL endpoints, enabling real-time data fetching and ensuring a highly secure checkout pipeline.",
-        "Actively engaged in Agile/Scrum processes, contributing to requirements and backlog refinement, while providing peer mentorship and conducting code reviews to elevate team engineering standards."
-        ,
-        "Engineered a scalable e-commerce application utilizing React, TypeScript, and Redux, translating complex Figma designs into pixel-perfect interfaces and establishing a robust frontend architecture."
-
+        "Built the frontend of a scalable e-commerce application with React, TypeScript and Redux, translating Figma designs into pixel-perfect, responsive interfaces.",
+        "Optimised performance with a focus on Core Web Vitals, improving page load speed and rendering efficiency without compromising visual quality.",
+        "Integrated frontend components with REST and GraphQL APIs for real-time product data and a secure checkout flow.",
+        "Wrote unit and component tests with Jest and React Testing Library, and followed a structured Git workflow across the team.",
+        "Took part in Agile/Scrum ceremonies and backlog refinement, and reviewed teammates' code to keep quality consistent."
       ],
       technologies: [
         "React",
-        "JavaScript",
         "TypeScript",
         "Redux",
-        "Agile / Scrum",
-        "HTML5 / CSS3",
-
-        "Jest",
-        "Integration Testing",
-        "RESTful APIs",
-        "GraphQL",
-        "Accessibility (WCAG)",
-
-        "Context API",
-        "Sass / SCSS",
-
         "Figma",
-        "Backlog Refinement",
-
-        "Cross-functional Collaboration",
-        "Performance Optimization",
-
+        "Core Web Vitals",
+        "REST APIs",
+        "GraphQL",
+        "Jest",
+        "React Testing Library",
+        "Git",
+        "Agile / Scrum"
       ]
-    },
-
+    }
   ],
 
   projects: [
